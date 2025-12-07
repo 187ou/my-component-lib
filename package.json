@@ -7,14 +7,15 @@
   "keywords": [
     "vue3",
     "component",
-    "ui"
+    "ui",
+    "oulin"
   ],
-  "author": "Your Name <your@email.com>",
+  "author": "18711541503@163.com",
   "license": "MIT",
-  "homepage": "https://github.com/yourname/my-component-lib",
+  "homepage": "https://github.com/187ou/my-component-lib",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourname/my-component-lib.git"
+    "url": "git@github.com:187ou/my-component-lib.git"
   },
   "files": [
     "dist",

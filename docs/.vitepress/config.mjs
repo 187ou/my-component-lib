@@ -12,7 +12,10 @@ export default defineConfig({
       '/components/': [
         {
           text: 'Components',
-          items: [{ text: 'Button', link: '/components/button' }]
+          items: [
+            { text: 'Button', link: '/components/button' },
+            { text: 'Input', link: '/components/input' }
+          ]
         }
       ]
     }
