@@ -1,0 +1,44 @@
+// src/styles/variables.scss
+// 颜色变量
+:root {
+  // 主色调
+  --my-color-primary: #409eff;
+  --my-color-success: #67c23a;
+  --my-color-warning: #e6a23c;
+  --my-color-danger: #f56c6c;
+  --my-color-info: #909399;
+
+  // 中性色
+  --my-color-white: #ffffff;
+  --my-color-black: #000000;
+  --my-color-gray-1: #f5f7fa;
+  --my-color-gray-2: #e4e7ed;
+  --my-color-gray-3: #c0c4cc;
+  --my-color-gray-4: #909399;
+  --my-color-gray-5: #606266;
+  --my-color-gray-6: #303133;
+}
+
+// SCSS 变量（编译时替换，用于组件内部）
+$color-primary: var(--my-color-primary);
+$color-success: var(--my-color-success);
+$color-warning: var(--my-color-warning);
+$color-danger: var(--my-color-danger);
+$color-info: var(--my-color-info);
+$color-white: var(--my-color-white);
+
+// 尺寸变量
+$font-size-large: 16px;
+$font-size-base: 14px;
+$font-size-small: 12px;
+
+$border-radius-base: 4px;
+$border-radius-large: 8px;
+$border-radius-small: 2px;
+
+// 间距变量
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;

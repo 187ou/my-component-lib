@@ -1,0 +1,16 @@
+// src/components/Button/button-types.ts
+import { Size, Type } from '@/types'
+
+// Button Props 类型
+export interface ButtonProps {
+  type?: Type
+  size?: Size
+  disabled?: boolean
+  loading?: boolean
+  icon?: string
+}
+
+// Button 事件类型
+export interface ButtonEmits {
+  (e: 'click', event: MouseEvent): void
+}

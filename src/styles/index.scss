@@ -1,0 +1,12 @@
+// src/styles/index.scss
+// 1. 重置样式（可选，推荐使用 normalize.css）
+//@import './reset.scss';
+
+// 2. 变量定义
+@use './variables.scss' as *;
+
+// 3. 全局工具类
+//@import './utils.scss';
+
+// 4. 组件共享样式（可选）
+//@import './common.scss';
