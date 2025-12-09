@@ -1,9 +1,10 @@
+<!-- src/components/Button/Button.vue -->
 <template>
   <button
     :class="[
-      'my-btn', // Block
-      `my-btn--${type}`, // Modifier: 类
-      `my-btn--${size}`, // Modifier: 尺寸
+      'my-btn',
+      `my-btn--${type}`,
+      `my-btn--${size}`,
       {
         'my-btn--disabled': disabled || loading,
         'my-btn--loading': loading
@@ -12,12 +13,15 @@
     :disabled="disabled || loading"
     @click="$emit('click', $event)"
   >
-    <!-- 图标插槽 -->
-    <slot name="icon" v-if="icon">
-      <i :class="icon"></i>
-    </slot>
+    <!-- 图标处理：优先使用插槽，其次使用 icon 属性 -->
+    <template v-if="$slots.icon">
+      <slot name="icon"></slot>
+    </template>
+    <my-icon v-else-if="icon" :name="icon" :size="iconSize"></my-icon>
+
     <!-- 加载状态 -->
     <span class="my-btn__loading" v-if="loading">⏳</span>
+
     <!-- 文本内容 -->
     <span class="my-btn__text">
       <slot></slot>
@@ -26,9 +30,11 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+import { MyIcon } from '../icon'
 import type { ButtonProps, ButtonEmits } from './button-types'
 
-// 注册 Props（带默认值）
+// Props 定义
 const props = withDefaults(defineProps<ButtonProps>(), {
   type: 'primary',
   size: 'medium',
@@ -36,12 +42,21 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   loading: false,
   icon: ''
 })
-// 静默处理未使用变量问题
-void props
 
-// 注册事件
-const emit = defineEmits<ButtonEmits>()
-void emit
+// Emits 定义
+defineEmits<ButtonEmits>()
+
+// 根据尺寸计算图标大小（新增）
+const iconSize = computed(() => {
+  switch (props.size) {
+    case 'large':
+      return '18px'
+    case 'small':
+      return '14px'
+    default:
+      return '16px'
+  }
+})
 </script>
 
 <style lang="scss" scoped>

@@ -15,6 +15,8 @@ export interface InputProps {
   maxlength?: number
   showWordLimit?: boolean
   inputType?: Type
+  prefixIcon?: string
+  suffixIcon?: string
 }
 
 // Input 事件类型

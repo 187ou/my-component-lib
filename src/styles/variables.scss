@@ -33,6 +33,12 @@ $color-gray-4: var(--my-color-gray-4);
 $color-gray-5: var(--my-color-gray-5);
 $color-gray-6: var(--my-color-gray-6);
 
+// 文本颜色
+$color-text-primary: $color-gray-6;    // 主要文本颜色
+$color-text-regular: $color-gray-5;    // 常规文本颜色
+$color-text-secondary: $color-gray-4;  // 次要文本颜色
+$color-text-placeholder: $color-gray-3; // 占位符文本颜色
+
 // 尺寸变量
 $font-size-large: 16px;
 $font-size-base: 14px;
@@ -48,3 +54,25 @@ $spacing-sm: 8px;
 $spacing-md: 16px;
 $spacing-lg: 24px;
 $spacing-xl: 32px;
+
+// 边框颜色
+$color-border-base: $color-gray-2;     // 基础边框颜色
+$color-border-light: $color-gray-1;    // 浅色边框
+
+// 背景色
+$color-background-base: $color-white;  // 基础背景色
+$color-background-light: $color-gray-1; // 浅色背景
+
+// 字体粗细
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// 阴影
+$box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+// 动画过渡
+$transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);

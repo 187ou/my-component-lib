@@ -15,13 +15,26 @@
       </div>
     </section>
 
-    <!-- 可添加其他组件测试 -->
+    <div>
+      <h2>Icon 组件</h2>
+      <my-icon name="search" size="24px" color="#409eff"></my-icon>
+      <my-icon name="edit" size="24px" color="#67c23a"></my-icon>
+
+      <h2>Button 集成 Icon</h2>
+      <my-button type="primary" icon="search">搜索按钮</my-button>
+
+      <h2>Input 集成 Icon</h2>
+      <my-input v-model="inputValue" placeholder="搜索" prefix-icon="search" clearable></my-input>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 // 按需引入组件（可选，用于测试按需引入）
-import { MyButton } from '../index'
+import { MyButton, MyIcon, MyInput } from '../index'
+import {ref} from "vue";
+
+const inputValue = ref('')
 </script>
 
 <style scoped>

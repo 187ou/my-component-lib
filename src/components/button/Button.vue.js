@@ -1,4 +1,6 @@
 /// <reference types="../../../node_modules/.vue-global-types/vue_3.5_0_0_0.d.ts" />
+import { computed } from 'vue';
+import { MyIcon } from '../icon';
 const props = withDefaults(defineProps(), {
     type: 'primary',
     size: 'medium',
@@ -6,10 +8,18 @@ const props = withDefaults(defineProps(), {
     loading: false,
     icon: ''
 });
-// 静默处理未使用变量问题
-void props;
-const emit = defineEmits();
-void emit;
+const __VLS_emit = defineEmits();
+// 根据尺寸计算图标大小（新增）
+const iconSize = computed(() => {
+    switch (props.size) {
+        case 'large':
+            return '18px';
+        case 'small':
+            return '14px';
+        default:
+            return '16px';
+    }
+});
 debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_withDefaultsArg = (function (t) { return t; })({
     type: 'primary',
@@ -28,9 +38,9 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElement
             __VLS_ctx.$emit('click', $event);
         } },
     ...{ class: ([
-            'my-btn', // Block
-            `my-btn--${__VLS_ctx.type}`, // Modifier: 类
-            `my-btn--${__VLS_ctx.size}`, // Modifier: 尺寸
+            'my-btn',
+            `my-btn--${__VLS_ctx.type}`,
+            `my-btn--${__VLS_ctx.size}`,
             {
                 'my-btn--disabled': __VLS_ctx.disabled || __VLS_ctx.loading,
                 'my-btn--loading': __VLS_ctx.loading
@@ -38,11 +48,21 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElement
         ]) },
     disabled: (__VLS_ctx.disabled || __VLS_ctx.loading),
 });
-if (__VLS_ctx.icon) {
+if (__VLS_ctx.$slots.icon) {
     var __VLS_0 = {};
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.i, __VLS_intrinsicElements.i)({
-        ...{ class: (__VLS_ctx.icon) },
-    });
+}
+else if (__VLS_ctx.icon) {
+    const __VLS_2 = {}.MyIcon;
+    /** @type {[typeof __VLS_components.MyIcon, typeof __VLS_components.myIcon, typeof __VLS_components.MyIcon, typeof __VLS_components.myIcon, ]} */ ;
+    // @ts-ignore
+    const __VLS_3 = __VLS_asFunctionalComponent(__VLS_2, new __VLS_2({
+        name: (__VLS_ctx.icon),
+        size: (__VLS_ctx.iconSize),
+    }));
+    const __VLS_4 = __VLS_3({
+        name: (__VLS_ctx.icon),
+        size: (__VLS_ctx.iconSize),
+    }, ...__VLS_functionalComponentArgsRest(__VLS_3));
 }
 if (__VLS_ctx.loading) {
     __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({
@@ -52,15 +72,18 @@ if (__VLS_ctx.loading) {
 __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({
     ...{ class: "my-btn__text" },
 });
-var __VLS_2 = {};
+var __VLS_6 = {};
 /** @type {__VLS_StyleScopedClasses['my-btn__loading']} */ ;
 /** @type {__VLS_StyleScopedClasses['my-btn__text']} */ ;
 // @ts-ignore
-var __VLS_1 = __VLS_0, __VLS_3 = __VLS_2;
+var __VLS_1 = __VLS_0, __VLS_7 = __VLS_6;
 var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {
-        return {};
+        return {
+            MyIcon: MyIcon,
+            iconSize: iconSize,
+        };
     },
     __typeEmits: {},
     __typeProps: {},

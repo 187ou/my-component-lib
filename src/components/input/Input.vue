@@ -12,8 +12,11 @@
     ]"
   >
     <!-- 前缀插槽 -->
-    <div class="my-input__prefix" v-if="$slots.prefix">
-      <slot name="prefix"></slot>
+    <div class="my-input__prefix">
+      <template v-if="$slots.prefix">
+        <slot name="prefix"></slot>
+      </template>
+      <my-icon v-else-if="prefixIcon" :name="prefixIcon" :size="iconSize"></my-icon>
     </div>
 
     <!-- 输入框 -->
@@ -54,7 +57,10 @@
       </span>
 
       <!-- 后缀插槽 -->
-      <slot name="suffix"></slot>
+      <template v-if="$slots.suffix">
+        <slot name="suffix"></slot>
+      </template>
+      <my-icon v-else-if="suffixIcon" :name="suffixIcon" :size="iconSize"></my-icon>
 
       <!-- 清空按钮 -->
       <button
@@ -71,8 +77,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import {computed, ref, watch} from 'vue'
 import type { InputProps, InputEmits } from './input-types'
+import { MyIcon } from '../icon'
 
 // Props 定义
 const props = withDefaults(defineProps<InputProps>(), {
@@ -87,7 +94,9 @@ const props = withDefaults(defineProps<InputProps>(), {
   showPassword: false,
   maxlength: undefined,
   showWordLimit: false,
-  inputType: 'primary'
+  inputType: 'primary',
+  prefixIcon: '',
+  suffixIcon: ''
 })
 
 // Emits 定义
@@ -140,6 +149,17 @@ const handleClear = () => {
 const togglePasswordVisibility = () => {
   isPasswordVisible.value = !isPasswordVisible.value
 }
+
+const iconSize = computed(() => {
+  switch (props.size) {
+    case 'large':
+      return '18px'
+    case 'small':
+      return '14px'
+    default:
+      return '16px'
+  }
+})
 
 // 监听 modelValue 变化（用于外部直接修改值时同步状态）
 watch(() => props.modelValue, (newValue) => {

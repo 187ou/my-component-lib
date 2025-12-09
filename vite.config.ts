@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
 import inspect from 'vite-plugin-inspect'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 export default defineConfig(({ mode }) => {
   const isTest = mode === 'test'
@@ -24,6 +25,23 @@ export default defineConfig(({ mode }) => {
         copyDtsFiles: true,
         include: ['src/**/*'],
         exclude: ['src/**/*.test.ts']
+      }),
+      createSvgIconsPlugin({
+        // 指定 SVG 图标目录
+        iconDirs: [resolve(__dirname, 'src/assets/icons')],
+        // 指定 symbolId 格式（用于 Icon 组件引用）
+        symbolId: 'icon-[name]',
+        // 注入到页面的 ID（默认：__svg__icons__dom__）
+        inject: 'body-first',
+        // 是否压缩 SVG
+        svgoOptions: {
+          plugins: [
+            {
+              name: 'removeAttrs',
+              params: { attrs: ['fill'] }
+            }
+          ]
+        }
       }),
       inspect()
     ],
