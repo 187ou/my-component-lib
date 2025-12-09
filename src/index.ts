@@ -4,9 +4,10 @@ import './styles/index.scss' // 全局样式入口
 
 // 导入组件
 import { MyButton } from './components/button'
+import { MyLink } from './components/link'
 
 // 组件列表（用于批量注册）
-const components = [MyButton]
+const components = [MyButton, MyLink]
 
 // 全局注册方法
 const install = (app: App) => {
@@ -16,10 +17,11 @@ const install = (app: App) => {
 }
 
 // 按需导出组件
-export { MyButton }
+export { MyButton, MyLink }
 
 // 导出类型
 export type { ButtonProps, ButtonEmits } from './components/button/button-types'
+export type { LinkProps, LinkEmits } from './components/link/link-types'
 
 // 默认导出（支持 app.use() 全局注册）
 export default {

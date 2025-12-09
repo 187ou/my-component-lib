@@ -1,5 +1,5 @@
 // src/components/Input/input-types.ts
-import { Size, Type } from '@/types'
+import { Size, Type } from '@/types/basic'
 
 // Input Props 类型
 export interface InputProps {

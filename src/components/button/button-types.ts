@@ -1,5 +1,5 @@
 // src/components/Button/button-types.ts
-import { Size, Type } from '@/types'
+import { Size, Type } from '@/types/basic'
 
 // Button Props 类型
 export interface ButtonProps {
