@@ -7,7 +7,7 @@ module.exports = {
     'plugin:vue/vue3-recommended'
   ],
   rules: {
-    'vue/multi-word-component-names': 'off', // 允许单单词组件名（如 Button）
-    '@typescript-eslint/no-explicit-any': 'off' // 允许 any 类型（开发初期可放宽）
+    'vue/multi-word-component-names': 'off',
+    '@typescript-eslint/no-explicit-any': 'off'
   }
 }

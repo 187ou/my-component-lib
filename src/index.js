@@ -1,3 +1,5 @@
+// src/index.ts
+import 'virtual:svg-icons-register';
 import './styles/index.scss'; // 全局样式入口
 // 导入组件
 import { MyButton } from './components/button';
