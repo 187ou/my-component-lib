@@ -8,6 +8,11 @@ export interface ButtonProps {
   disabled?: boolean
   loading?: boolean
   icon?: string
+  plain?: boolean
+  text?: boolean
+  round?: boolean
+  circle?: boolean
+  block?: boolean
 }
 
 // Button 事件类型

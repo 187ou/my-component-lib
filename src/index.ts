@@ -1,5 +1,5 @@
 // src/index.ts
-import 'virtual:svg-icons-register'  
+import 'virtual:svg-icons-register'
 import { App } from 'vue'
 import './styles/index.scss' // 全局样式入口
 

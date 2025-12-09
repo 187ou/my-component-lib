@@ -15,8 +15,12 @@ export interface LinkProps {
   underline?: boolean
   // 链接目标
   target?: '_blank' | '_self' | '_parent' | '_top'
-  // 图标类名
+  // 图标类名（兼容旧用法）
   icon?: string
+  // 前置图标名称
+  prefixIcon?: string
+  // 后置图标名称
+  suffixIcon?: string
   // 是否在新标签页打开
   openInNewTab?: boolean
 }

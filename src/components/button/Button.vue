@@ -7,7 +7,12 @@
       `my-btn--${size}`,
       {
         'my-btn--disabled': disabled || loading,
-        'my-btn--loading': loading
+        'my-btn--loading': loading,
+        'my-btn--plain': props.plain,
+        'my-btn--text': text,
+        'my-btn--round': round,
+        'my-btn--circle': circle,
+        'my-btn--block': block
       }
     ]"
     :disabled="disabled || loading"
@@ -40,7 +45,12 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   size: 'medium',
   disabled: false,
   loading: false,
-  icon: ''
+  icon: '',
+  plain: false,
+  text: false,
+  round: false,
+  circle: false,
+  block: false
 })
 
 // Emits 定义
@@ -65,6 +75,43 @@ const iconSize = computed(() => {
 
 // Block: my-btn
 .my-btn {
+  &--block {
+    display: flex;
+    width: 100%;
+  }
+
+  &--round {
+    border-radius: $border-radius-large;
+  }
+
+  &--circle {
+    border-radius: 50%;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  &--plain {
+    background-color: transparent;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+
+    &:hover:not(&--disabled) {
+      background-color: color-mix(in srgb, $color-primary 10%, transparent 90%);
+    }
+  }
+
+  &--text {
+    background-color: transparent;
+    color: $color-primary;
+    padding: 0 4px;
+
+    &:hover:not(&--disabled) {
+      text-decoration: underline;
+      background-color: transparent;
+    }
+  }
+
   display: inline-flex;
   align-items: center;
   justify-content: center;

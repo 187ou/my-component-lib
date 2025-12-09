@@ -6,7 +6,8 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Components', link: '/components/button' }
+      { text: 'Components', link: '/components/button' },
+      { text: 'Author', link: '/author' }
     ],
     sidebar: {
       '/components/': [

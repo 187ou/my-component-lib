@@ -15,13 +15,39 @@
     @click="handleClick"
   >
     <!-- 图标插槽 -->
-    <slot name="icon" v-if="icon">
-      <i :class="icon"></i>
-    </slot>
+    <!-- 前缀内容 -->
+    <span
+      v-if="$slots.prefix || prefixIcon || icon"
+      class="my-link__prefix"
+    >
+      <template v-if="$slots.prefix">
+        <slot name="prefix" />
+      </template>
+      <template v-else-if="prefixIcon">
+        <my-icon :name="prefixIcon" :size="iconSize" />
+      </template>
+      <template v-else-if="icon">
+        <!-- 兼容旧 icon 用法 -->
+        <my-icon :name="icon" :size="iconSize" />
+      </template>
+    </span>
 
     <!-- 文本内容 -->
     <span class="my-link__text">
       <slot></slot>
+    </span>
+
+    <!-- 后缀内容 -->
+    <span
+      v-if="$slots.suffix || suffixIcon"
+      class="my-link__suffix"
+    >
+      <template v-if="$slots.suffix">
+        <slot name="suffix" />
+      </template>
+      <template v-else-if="suffixIcon">
+        <my-icon :name="suffixIcon" :size="iconSize" />
+      </template>
     </span>
 
     <!-- 新标签页打开图标 -->
@@ -43,10 +69,27 @@ const props = withDefaults(defineProps<LinkProps>(), {
   underline: false,
   target: '_self',
   icon: '',
+  prefixIcon: '',
+  suffixIcon: '',
   openInNewTab: false
 })
 
 // 静默处理未使用变量问题
+import { MyIcon } from '../icon'
+import { computed } from 'vue'
+
+// 静默处理未使用变量问题
+const iconSize = computed(() => {
+  switch (props.size) {
+    case 'large':
+      return '18px'
+    case 'small':
+      return '14px'
+    default:
+      return '16px'
+  }
+})
+
 void props
 
 // 注册事件
@@ -74,6 +117,12 @@ const handleClick = (event: MouseEvent) => {
 
 // Block: my-link
 .my-link {
+  // Prefix & Suffix Elements
+  &__prefix,
+  &__suffix {
+    display: inline-flex;
+    align-items: center;
+  }
   display: inline-flex;
   align-items: center;
   justify-content: center;

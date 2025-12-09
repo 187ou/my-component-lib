@@ -25,13 +25,16 @@
 
       <h2>Input 集成 Icon</h2>
       <my-input v-model="inputValue" placeholder="搜索" prefix-icon="search" clearable></my-input>
+
+      <h2>Link 集成 Icon</h2>
+      <my-link href="#" icon="edit">百度一下</my-link>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 // 按需引入组件（可选，用于测试按需引入）
-import { MyButton, MyIcon, MyInput } from '../index'
+import { MyButton, MyIcon, MyInput, MyLink } from '../index'
 import {ref} from "vue";
 
 const inputValue = ref('')
