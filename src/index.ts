@@ -8,9 +8,10 @@ import { MyButton } from './components/button'
 import { MyInput } from './components/input'
 import { MyLink } from './components/link'
 import { MyIcon } from './components/icon'
+import { MyAvatar } from './components/avatar'
 
 // 组件列表（用于批量注册）
-const components = [MyButton, MyLink, MyInput, MyIcon]
+const components = [MyButton, MyLink, MyInput, MyIcon, MyAvatar]
 
 // 全局注册方法
 const install = (app: App) => {
@@ -20,13 +21,14 @@ const install = (app: App) => {
 }
 
 // 按需导出组件
-export { MyButton, MyLink, MyInput, MyIcon }
+export { MyButton, MyLink, MyInput, MyAvatar, MyIcon }
 
 // 导出类型
 export type { ButtonProps, ButtonEmits } from './components/button/button-types'
 export type { InputProps, InputEmits } from './components/input/input-types'
 export type { LinkProps, LinkEmits } from './components/link/link-types'
 export type { IconProps } from './components/icon/icon-types'
+export type { AvatarProps, AvatarEmits } from './components/avatar/avatar-types'
 
 // 默认导出（支持 app.use() 全局注册）
 export default {

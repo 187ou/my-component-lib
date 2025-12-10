@@ -75,10 +75,10 @@ describe('MyLink', () => {
   // 测试图标插槽
   it('should render icon slot', () => {
     const wrapper = mount(MyLink, {
-      props: { icon: 'icon-search' },
+      props: { icon: 'search' },
       slots: { default: 'Search Link' }
     })
-    expect(wrapper.find('i').classes()).toContain('icon-search')
+    expect(wrapper.find('.my-link__prefix svg').exists()).toBe(true)
   })
 
   // 测试外部链接图标

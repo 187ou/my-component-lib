@@ -6,7 +6,12 @@ const props = withDefaults(defineProps(), {
     size: 'medium',
     disabled: false,
     loading: false,
-    icon: ''
+    icon: '',
+    plain: false,
+    text: false,
+    round: false,
+    circle: false,
+    block: false
 });
 const __VLS_emit = defineEmits();
 // 根据尺寸计算图标大小（新增）
@@ -26,7 +31,12 @@ const __VLS_withDefaultsArg = (function (t) { return t; })({
     size: 'medium',
     disabled: false,
     loading: false,
-    icon: ''
+    icon: '',
+    plain: false,
+    text: false,
+    round: false,
+    circle: false,
+    block: false
 });
 const __VLS_ctx = {};
 let __VLS_components;
@@ -43,7 +53,12 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElement
             `my-btn--${__VLS_ctx.size}`,
             {
                 'my-btn--disabled': __VLS_ctx.disabled || __VLS_ctx.loading,
-                'my-btn--loading': __VLS_ctx.loading
+                'my-btn--loading': __VLS_ctx.loading,
+                'my-btn--plain': props.plain,
+                'my-btn--text': __VLS_ctx.text,
+                'my-btn--round': __VLS_ctx.round,
+                'my-btn--circle': __VLS_ctx.circle,
+                'my-btn--block': __VLS_ctx.block
             }
         ]) },
     disabled: (__VLS_ctx.disabled || __VLS_ctx.loading),

@@ -90,8 +90,6 @@ const iconSize = computed(() => {
   }
 })
 
-void props
-
 // 注册事件
 const emit = defineEmits<LinkEmits>()
 

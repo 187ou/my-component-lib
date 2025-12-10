@@ -3,7 +3,6 @@
   <div class="demo-container">
     <h1>My Component Lib Demo</h1>
 
-    <!-- 测试 Button 组件 -->
     <section class="demo-section">
       <h2>Button 组件测试</h2>
       <div class="demo-buttons">
@@ -27,14 +26,21 @@
       <my-input v-model="inputValue" placeholder="搜索" prefix-icon="search" clearable></my-input>
 
       <h2>Link 集成 Icon</h2>
+      <h2>Avatar 组件</h2>
       <my-link href="#" icon="edit">百度一下</my-link>
+
+      <h2>Avatar 测试</h2>
+      <div class="demo-avatars">
+        <my-avatar src="https://placehold.co/150x150.png" :size="64" />
+        <my-avatar icon="user" :size="64" />
+        <my-avatar text="Alice" :size="64" />
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-// 按需引入组件（可选，用于测试按需引入）
-import { MyButton, MyIcon, MyInput, MyLink } from '../index'
+import { MyButton, MyIcon, MyInput, MyLink, MyAvatar } from '../index'
 import {ref} from "vue";
 
 const inputValue = ref('')
@@ -58,5 +64,11 @@ const inputValue = ref('')
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+.demo-avatars {
+  display: flex;
+  gap: 24px;
+  align-items: center;
 }
 </style>

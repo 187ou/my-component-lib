@@ -6,8 +6,9 @@ import { MyButton } from './components/button';
 import { MyInput } from './components/input';
 import { MyLink } from './components/link';
 import { MyIcon } from './components/icon';
+import { MyAvatar } from './components/avatar';
 // 组件列表（用于批量注册）
-const components = [MyButton, MyLink, MyInput, MyIcon];
+const components = [MyButton, MyLink, MyInput, MyIcon, MyAvatar];
 // 全局注册方法
 const install = (app) => {
     components.forEach(component => {
@@ -15,7 +16,7 @@ const install = (app) => {
     });
 };
 // 按需导出组件
-export { MyButton, MyLink, MyInput, MyIcon };
+export { MyButton, MyLink, MyInput, MyAvatar, MyIcon };
 // 默认导出（支持 app.use() 全局注册）
 export default {
     install

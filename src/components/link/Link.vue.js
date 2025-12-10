@@ -7,10 +7,24 @@ const props = withDefaults(defineProps(), {
     underline: false,
     target: '_self',
     icon: '',
+    prefixIcon: '',
+    suffixIcon: '',
     openInNewTab: false
 });
 // 静默处理未使用变量问题
-void props;
+import { MyIcon } from '../icon';
+import { computed } from 'vue';
+// 静默处理未使用变量问题
+const iconSize = computed(() => {
+    switch (props.size) {
+        case 'large':
+            return '18px';
+        case 'small':
+            return '14px';
+        default:
+            return '16px';
+    }
+});
 const emit = defineEmits();
 // 处理点击事件
 const handleClick = (event) => {
@@ -33,6 +47,8 @@ const __VLS_withDefaultsArg = (function (t) { return t; })({
     underline: false,
     target: '_self',
     icon: '',
+    prefixIcon: '',
+    suffixIcon: '',
     openInNewTab: false
 });
 const __VLS_ctx = {};
@@ -55,29 +71,82 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.a, __VLS_intrinsicElements.a)(
             }
         ]) },
 });
-if (__VLS_ctx.icon) {
-    var __VLS_0 = {};
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.i, __VLS_intrinsicElements.i)({
-        ...{ class: (__VLS_ctx.icon) },
+if (__VLS_ctx.$slots.prefix || __VLS_ctx.prefixIcon || __VLS_ctx.icon) {
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({
+        ...{ class: "my-link__prefix" },
     });
+    if (__VLS_ctx.$slots.prefix) {
+        var __VLS_0 = {};
+    }
+    else if (__VLS_ctx.prefixIcon) {
+        const __VLS_2 = {}.MyIcon;
+        /** @type {[typeof __VLS_components.MyIcon, typeof __VLS_components.myIcon, ]} */ ;
+        // @ts-ignore
+        const __VLS_3 = __VLS_asFunctionalComponent(__VLS_2, new __VLS_2({
+            name: (__VLS_ctx.prefixIcon),
+            size: (__VLS_ctx.iconSize),
+        }));
+        const __VLS_4 = __VLS_3({
+            name: (__VLS_ctx.prefixIcon),
+            size: (__VLS_ctx.iconSize),
+        }, ...__VLS_functionalComponentArgsRest(__VLS_3));
+    }
+    else if (__VLS_ctx.icon) {
+        const __VLS_6 = {}.MyIcon;
+        /** @type {[typeof __VLS_components.MyIcon, typeof __VLS_components.myIcon, ]} */ ;
+        // @ts-ignore
+        const __VLS_7 = __VLS_asFunctionalComponent(__VLS_6, new __VLS_6({
+            name: (__VLS_ctx.icon),
+            size: (__VLS_ctx.iconSize),
+        }));
+        const __VLS_8 = __VLS_7({
+            name: (__VLS_ctx.icon),
+            size: (__VLS_ctx.iconSize),
+        }, ...__VLS_functionalComponentArgsRest(__VLS_7));
+    }
 }
 __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({
     ...{ class: "my-link__text" },
 });
-var __VLS_2 = {};
+var __VLS_10 = {};
+if (__VLS_ctx.$slots.suffix || __VLS_ctx.suffixIcon) {
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({
+        ...{ class: "my-link__suffix" },
+    });
+    if (__VLS_ctx.$slots.suffix) {
+        var __VLS_12 = {};
+    }
+    else if (__VLS_ctx.suffixIcon) {
+        const __VLS_14 = {}.MyIcon;
+        /** @type {[typeof __VLS_components.MyIcon, typeof __VLS_components.myIcon, ]} */ ;
+        // @ts-ignore
+        const __VLS_15 = __VLS_asFunctionalComponent(__VLS_14, new __VLS_14({
+            name: (__VLS_ctx.suffixIcon),
+            size: (__VLS_ctx.iconSize),
+        }));
+        const __VLS_16 = __VLS_15({
+            name: (__VLS_ctx.suffixIcon),
+            size: (__VLS_ctx.iconSize),
+        }, ...__VLS_functionalComponentArgsRest(__VLS_15));
+    }
+}
 if (__VLS_ctx.openInNewTab) {
     __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({
         ...{ class: "my-link__external" },
     });
 }
+/** @type {__VLS_StyleScopedClasses['my-link__prefix']} */ ;
 /** @type {__VLS_StyleScopedClasses['my-link__text']} */ ;
+/** @type {__VLS_StyleScopedClasses['my-link__suffix']} */ ;
 /** @type {__VLS_StyleScopedClasses['my-link__external']} */ ;
 // @ts-ignore
-var __VLS_1 = __VLS_0, __VLS_3 = __VLS_2;
+var __VLS_1 = __VLS_0, __VLS_11 = __VLS_10, __VLS_13 = __VLS_12;
 var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {
         return {
+            MyIcon: MyIcon,
+            iconSize: iconSize,
             handleClick: handleClick,
         };
     },

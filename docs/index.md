@@ -56,19 +56,20 @@ import App from './App.vue'
 
 // 引入组件库及样式
 import MyComponentLib from 'my-component-lib'
-import 'my-component-lib/dist/style.css'
+import 'my-component-lib/style'
 
 createApp(App).use(MyComponentLib).mount('#app')
 ```
 
 ## 🌈 组件一览
 
-| 组件 | 说明 | 文档 |
-|-------|------|------|
+| 组件        | 说明                 | 文档 |
+|-----------|--------------------|------|
 | Button 按钮 | 常用操作按钮，支持多种主题 & 状态 | [查看 →](./components/button.md) |
-| Input 输入框 | 轻量、灵活的输入组件 | [查看 →](./components/input.md) |
-| Link 文字链接 | 可插入前后置图标、禁用、跳转 | [查看 →](./components/link.md) |
-| Icon 图标 | 基于 SVG Sprite 的多彩图标 | [查看 →](./components/icon.md) |
+| Input 输入框 | 轻量、灵活的输入组件         | [查看 →](./components/input.md) |
+| Link 文字链接 | 可插入前后置图标、禁用、跳转     | [查看 →](./components/link.md) |
+| Icon 图标   | 基于 SVG Sprite 的多彩图标 | [查看 →](./components/icon.md) |
+| Avatar 头像 | 圆形头像               | [查看 →](./components/avatar.md) |    
 
 更多组件正在路上，敬请期待！
 

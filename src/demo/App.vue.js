@@ -1,6 +1,5 @@
 /// <reference types="../../node_modules/.vue-global-types/vue_3.5_0_0_0.d.ts" />
-// 按需引入组件（可选，用于测试按需引入）
-import { MyButton, MyIcon, MyInput } from '../index';
+import { MyButton, MyIcon, MyInput, MyLink, MyAvatar } from '../index';
 import { ref } from "vue";
 const inputValue = ref('');
 debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
@@ -133,9 +132,62 @@ const __VLS_34 = __VLS_33({
     prefixIcon: "search",
     clearable: true,
 }, ...__VLS_functionalComponentArgsRest(__VLS_33));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
+const __VLS_36 = {}.MyLink;
+/** @type {[typeof __VLS_components.MyLink, typeof __VLS_components.myLink, typeof __VLS_components.MyLink, typeof __VLS_components.myLink, ]} */ ;
+// @ts-ignore
+const __VLS_37 = __VLS_asFunctionalComponent(__VLS_36, new __VLS_36({
+    href: "#",
+    icon: "edit",
+}));
+const __VLS_38 = __VLS_37({
+    href: "#",
+    icon: "edit",
+}, ...__VLS_functionalComponentArgsRest(__VLS_37));
+__VLS_39.slots.default;
+var __VLS_39;
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-avatars" },
+});
+const __VLS_40 = {}.MyAvatar;
+/** @type {[typeof __VLS_components.MyAvatar, typeof __VLS_components.myAvatar, ]} */ ;
+// @ts-ignore
+const __VLS_41 = __VLS_asFunctionalComponent(__VLS_40, new __VLS_40({
+    src: "https://placehold.co/150x150.png",
+    size: (64),
+}));
+const __VLS_42 = __VLS_41({
+    src: "https://placehold.co/150x150.png",
+    size: (64),
+}, ...__VLS_functionalComponentArgsRest(__VLS_41));
+const __VLS_44 = {}.MyAvatar;
+/** @type {[typeof __VLS_components.MyAvatar, typeof __VLS_components.myAvatar, ]} */ ;
+// @ts-ignore
+const __VLS_45 = __VLS_asFunctionalComponent(__VLS_44, new __VLS_44({
+    icon: "user",
+    size: (64),
+}));
+const __VLS_46 = __VLS_45({
+    icon: "user",
+    size: (64),
+}, ...__VLS_functionalComponentArgsRest(__VLS_45));
+const __VLS_48 = {}.MyAvatar;
+/** @type {[typeof __VLS_components.MyAvatar, typeof __VLS_components.myAvatar, ]} */ ;
+// @ts-ignore
+const __VLS_49 = __VLS_asFunctionalComponent(__VLS_48, new __VLS_48({
+    text: "Alice",
+    size: (64),
+}));
+const __VLS_50 = __VLS_49({
+    text: "Alice",
+    size: (64),
+}, ...__VLS_functionalComponentArgsRest(__VLS_49));
 /** @type {__VLS_StyleScopedClasses['demo-container']} */ ;
 /** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
 /** @type {__VLS_StyleScopedClasses['demo-buttons']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-avatars']} */ ;
 var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {
@@ -143,6 +195,8 @@ const __VLS_self = (await import('vue')).defineComponent({
             MyButton: MyButton,
             MyIcon: MyIcon,
             MyInput: MyInput,
+            MyLink: MyLink,
+            MyAvatar: MyAvatar,
             inputValue: inputValue,
         };
     },

@@ -6,7 +6,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Components', link: '/components/button' },
+      { text: 'Components', link: '/components/Avatar' },
       { text: 'Author', link: '/author' }
     ],
     sidebar: {
@@ -14,10 +14,11 @@ export default defineConfig({
         {
           text: 'Components',
           items: [
+            { text: 'Avatar', link: '/components/avatar'},
             { text: 'Button', link: '/components/button' },
             { text: 'Input', link: '/components/input' },
+            { text: 'Icon', link: '/components/icon'},
             { text: 'Link', link: '/components/link'},
-            { text: 'Icon', link: '/components/icon'}
           ]
         }
       ]
