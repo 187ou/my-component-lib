@@ -68,6 +68,7 @@ createApp(App).use(MyComponentLib).mount('#app')
 | Avatar 头像 | 圆形头像               | [查看 →](./components/avatar.md) |    
 | Button 按钮 | 常用操作按钮，支持多种主题 & 状态 | [查看 →](./components/button.md) |
 | Card 卡片 | 承载内容、展示信息、进行操作 | [查看 →](./components/card.md) |
+| Collapse 折叠面板 | 折叠面板组件，可配置手风琴效果 | [查看 →](./components/collapse.md) |
 | Input 输入框 | 轻量、灵活的输入组件         | [查看 →](./components/input.md) |
 | Link 文字链接 | 可插入前后置图标、禁用、跳转     | [查看 →](./components/link.md) |
 | Icon 图标   | 基于 SVG Sprite 的多彩图标 | [查看 →](./components/icon.md) |

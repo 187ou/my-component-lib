@@ -1,11 +1,41 @@
 /// <reference types="../../node_modules/.vue-global-types/vue_3.5_0_0_0.d.ts" />
-import { LinButton, LinIcon, LinInput, LinLink, LinAvatar, LinCard } from '../index';
-import { ref } from "vue";
+import { ref } from 'vue';
+import { LinButton, LinIcon, LinInput, LinLink, LinAvatar, LinCard, LinCarousel } from '../index';
 const inputValue = ref('');
+// Carousel 相关数据
+const imageItems = [
+    'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
+    'https://images.unsplash.com/photo-1519681393784-d120267933ba',
+    'https://images.unsplash.com/photo-1501785888041-af3ef285b470',
+    'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05'
+];
+const customItems = [
+    {
+        title: '功能丰富',
+        content: '支持多种轮播效果和交互方式',
+        color: '#FF6B6B'
+    },
+    {
+        title: '响应式设计',
+        content: '完美适配各种屏幕尺寸',
+        color: '#4ECDC4'
+    },
+    {
+        title: '易于使用',
+        content: '提供丰富的配置项和自定义插槽',
+        color: '#45B7D1'
+    }
+];
 debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
 let __VLS_components;
 let __VLS_directives;
+/** @type {__VLS_StyleScopedClasses['carousel-demo']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
+/** @type {__VLS_StyleScopedClasses['carousel-demo']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
+/** @type {__VLS_StyleScopedClasses['custom-slide']} */ ;
+/** @type {__VLS_StyleScopedClasses['custom-slide']} */ ;
 // CSS variable injection 
 // CSS variable injection end 
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
@@ -215,10 +245,218 @@ __VLS_55.slots.default;
     var __VLS_59;
 }
 var __VLS_55;
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "carousel-demo" },
+});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-section" },
+});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h3, __VLS_intrinsicElements.h3)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-carousel" },
+});
+const __VLS_60 = {}.LinCarousel;
+/** @type {[typeof __VLS_components.LinCarousel, typeof __VLS_components.linCarousel, ]} */ ;
+// @ts-ignore
+const __VLS_61 = __VLS_asFunctionalComponent(__VLS_60, new __VLS_60({
+    items: (__VLS_ctx.imageItems),
+}));
+const __VLS_62 = __VLS_61({
+    items: (__VLS_ctx.imageItems),
+}, ...__VLS_functionalComponentArgsRest(__VLS_61));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-section" },
+});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h3, __VLS_intrinsicElements.h3)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-carousel" },
+});
+const __VLS_64 = {}.LinCarousel;
+/** @type {[typeof __VLS_components.LinCarousel, typeof __VLS_components.linCarousel, ]} */ ;
+// @ts-ignore
+const __VLS_65 = __VLS_asFunctionalComponent(__VLS_64, new __VLS_64({
+    items: (__VLS_ctx.imageItems),
+    autoplay: true,
+    interval: (2000),
+}));
+const __VLS_66 = __VLS_65({
+    items: (__VLS_ctx.imageItems),
+    autoplay: true,
+    interval: (2000),
+}, ...__VLS_functionalComponentArgsRest(__VLS_65));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-section" },
+});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h3, __VLS_intrinsicElements.h3)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-carousel" },
+    ...{ style: {} },
+});
+const __VLS_68 = {}.LinCarousel;
+/** @type {[typeof __VLS_components.LinCarousel, typeof __VLS_components.linCarousel, ]} */ ;
+// @ts-ignore
+const __VLS_69 = __VLS_asFunctionalComponent(__VLS_68, new __VLS_68({
+    items: (__VLS_ctx.imageItems),
+    direction: "vertical",
+    height: "400px",
+}));
+const __VLS_70 = __VLS_69({
+    items: (__VLS_ctx.imageItems),
+    direction: "vertical",
+    height: "400px",
+}, ...__VLS_functionalComponentArgsRest(__VLS_69));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-section" },
+});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h3, __VLS_intrinsicElements.h3)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-carousel" },
+});
+const __VLS_72 = {}.LinCarousel;
+/** @type {[typeof __VLS_components.LinCarousel, typeof __VLS_components.linCarousel, ]} */ ;
+// @ts-ignore
+const __VLS_73 = __VLS_asFunctionalComponent(__VLS_72, new __VLS_72({
+    items: (__VLS_ctx.imageItems),
+    effect: "fade",
+}));
+const __VLS_74 = __VLS_73({
+    items: (__VLS_ctx.imageItems),
+    effect: "fade",
+}, ...__VLS_functionalComponentArgsRest(__VLS_73));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-section" },
+});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h3, __VLS_intrinsicElements.h3)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-carousel" },
+});
+const __VLS_76 = {}.LinCarousel;
+/** @type {[typeof __VLS_components.LinCarousel, typeof __VLS_components.linCarousel, ]} */ ;
+// @ts-ignore
+const __VLS_77 = __VLS_asFunctionalComponent(__VLS_76, new __VLS_76({
+    items: (__VLS_ctx.imageItems),
+    effect: "card",
+    indicatorType: "number",
+}));
+const __VLS_78 = __VLS_77({
+    items: (__VLS_ctx.imageItems),
+    effect: "card",
+    indicatorType: "number",
+}, ...__VLS_functionalComponentArgsRest(__VLS_77));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-section" },
+});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h3, __VLS_intrinsicElements.h3)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-carousel" },
+});
+const __VLS_80 = {}.LinCarousel;
+/** @type {[typeof __VLS_components.LinCarousel, typeof __VLS_components.linCarousel, typeof __VLS_components.LinCarousel, typeof __VLS_components.linCarousel, ]} */ ;
+// @ts-ignore
+const __VLS_81 = __VLS_asFunctionalComponent(__VLS_80, new __VLS_80({
+    items: (__VLS_ctx.customItems),
+}));
+const __VLS_82 = __VLS_81({
+    items: (__VLS_ctx.customItems),
+}, ...__VLS_functionalComponentArgsRest(__VLS_81));
+__VLS_83.slots.default;
+{
+    const { default: __VLS_thisSlot } = __VLS_83.slots;
+    const [{ item, index }] = __VLS_getSlotParams(__VLS_thisSlot);
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+        ...{ class: "custom-slide" },
+        ...{ style: ({ backgroundColor: item.color }) },
+    });
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.h3, __VLS_intrinsicElements.h3)({});
+    (item.title);
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({});
+    (item.content);
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({
+        ...{ class: "slide-index" },
+    });
+    (index + 1);
+}
+{
+    const { 'prev-arrow': __VLS_thisSlot } = __VLS_83.slots;
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({
+        ...{ class: "custom-arrow" },
+    });
+}
+{
+    const { 'next-arrow': __VLS_thisSlot } = __VLS_83.slots;
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({
+        ...{ class: "custom-arrow" },
+    });
+}
+var __VLS_83;
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-section" },
+});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h3, __VLS_intrinsicElements.h3)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-carousel" },
+});
+const __VLS_84 = {}.LinCarousel;
+/** @type {[typeof __VLS_components.LinCarousel, typeof __VLS_components.linCarousel, ]} */ ;
+// @ts-ignore
+const __VLS_85 = __VLS_asFunctionalComponent(__VLS_84, new __VLS_84({
+    items: (__VLS_ctx.imageItems),
+    thumbnails: true,
+    arrowPosition: "outer",
+}));
+const __VLS_86 = __VLS_85({
+    items: (__VLS_ctx.imageItems),
+    thumbnails: true,
+    arrowPosition: "outer",
+}, ...__VLS_functionalComponentArgsRest(__VLS_85));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-section" },
+});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h3, __VLS_intrinsicElements.h3)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "demo-carousel" },
+});
+const __VLS_88 = {}.LinCarousel;
+/** @type {[typeof __VLS_components.LinCarousel, typeof __VLS_components.linCarousel, ]} */ ;
+// @ts-ignore
+const __VLS_89 = __VLS_asFunctionalComponent(__VLS_88, new __VLS_88({
+    items: (__VLS_ctx.imageItems),
+    progressBar: true,
+    autoplay: true,
+    interval: (3000),
+}));
+const __VLS_90 = __VLS_89({
+    items: (__VLS_ctx.imageItems),
+    progressBar: true,
+    autoplay: true,
+    interval: (3000),
+}, ...__VLS_functionalComponentArgsRest(__VLS_89));
 /** @type {__VLS_StyleScopedClasses['demo-container']} */ ;
 /** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
 /** @type {__VLS_StyleScopedClasses['demo-buttons']} */ ;
 /** @type {__VLS_StyleScopedClasses['demo-avatars']} */ ;
+/** @type {__VLS_StyleScopedClasses['carousel-demo']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-carousel']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-carousel']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-carousel']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-carousel']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-carousel']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-carousel']} */ ;
+/** @type {__VLS_StyleScopedClasses['custom-slide']} */ ;
+/** @type {__VLS_StyleScopedClasses['slide-index']} */ ;
+/** @type {__VLS_StyleScopedClasses['custom-arrow']} */ ;
+/** @type {__VLS_StyleScopedClasses['custom-arrow']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-carousel']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
+/** @type {__VLS_StyleScopedClasses['demo-carousel']} */ ;
 var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {
@@ -229,7 +467,10 @@ const __VLS_self = (await import('vue')).defineComponent({
             LinLink: LinLink,
             LinAvatar: LinAvatar,
             LinCard: LinCard,
+            LinCarousel: LinCarousel,
             inputValue: inputValue,
+            imageItems: imageItems,
+            customItems: customItems,
         };
     },
 });

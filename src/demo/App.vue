@@ -43,17 +43,142 @@
         </template>
       </lin-card>
 
+      <!-- 添加 Carousel 演示 -->
+      <div class="carousel-demo">
+        <h2>轮播图组件演示</h2>
+
+        <div class="demo-section">
+          <h3>基础用法</h3>
+          <div class="demo-carousel">
+            <lin-carousel :items="imageItems" />
+          </div>
+        </div>
+
+        <div class="demo-section">
+          <h3>自动播放</h3>
+          <div class="demo-carousel">
+            <lin-carousel
+              :items="imageItems"
+              autoplay
+              :interval="2000"
+            />
+          </div>
+        </div>
+
+        <div class="demo-section">
+          <h3>垂直方向</h3>
+          <div class="demo-carousel" style="height: 400px;">
+            <lin-carousel
+              :items="imageItems"
+              direction="vertical"
+              height="400px"
+            />
+          </div>
+        </div>
+
+        <div class="demo-section">
+          <h3>淡入淡出效果</h3>
+          <div class="demo-carousel">
+            <lin-carousel
+              :items="imageItems"
+              effect="fade"
+            />
+          </div>
+        </div>
+
+        <div class="demo-section">
+          <h3>卡片效果</h3>
+          <div class="demo-carousel">
+            <lin-carousel
+              :items="imageItems"
+              effect="card"
+              indicator-type="number"
+            />
+          </div>
+        </div>
+
+        <div class="demo-section">
+          <h3>自定义内容</h3>
+          <div class="demo-carousel">
+            <lin-carousel :items="customItems">
+              <template #default="{ item, index }">
+                <div class="custom-slide" :style="{ backgroundColor: item.color }">
+                  <h3>{{ item.title }}</h3>
+                  <p>{{ item.content }}</p>
+                  <span class="slide-index">Slide {{ index + 1 }}</span>
+                </div>
+              </template>
+
+              <template #prev-arrow>
+                <span class="custom-arrow">👈</span>
+              </template>
+
+              <template #next-arrow>
+                <span class="custom-arrow">👉</span>
+              </template>
+            </lin-carousel>
+          </div>
+        </div>
+
+        <div class="demo-section">
+          <h3>缩略图模式</h3>
+          <div class="demo-carousel">
+            <lin-carousel
+              :items="imageItems"
+              thumbnails
+              arrow-position="outer"
+            />
+          </div>
+        </div>
+
+        <div class="demo-section">
+          <h3>进度条显示</h3>
+          <div class="demo-carousel">
+            <lin-carousel
+              :items="imageItems"
+              progress-bar
+              autoplay
+              :interval="3000"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { LinButton, LinIcon, LinInput, LinLink, LinAvatar, LinCard } from '../index'
-import {ref} from "vue";
+import { ref } from 'vue'
+import { LinButton, LinIcon, LinInput, LinLink, LinAvatar, LinCard, LinCarousel } from '../index'
 
 const inputValue = ref('')
-</script>
 
+// Carousel 相关数据
+const imageItems = [
+  'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
+  'https://images.unsplash.com/photo-1519681393784-d120267933ba',
+  'https://images.unsplash.com/photo-1501785888041-af3ef285b470',
+  'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05'
+]
+
+const customItems = [
+  {
+    title: '功能丰富',
+    content: '支持多种轮播效果和交互方式',
+    color: '#FF6B6B'
+  },
+  {
+    title: '响应式设计',
+    content: '完美适配各种屏幕尺寸',
+    color: '#4ECDC4'
+  },
+  {
+    title: '易于使用',
+    content: '提供丰富的配置项和自定义插槽',
+    color: '#45B7D1'
+  }
+]
+</script>
 
 <style scoped>
 .demo-container {
@@ -79,5 +204,66 @@ const inputValue = ref('')
   display: flex;
   gap: 24px;
   align-items: center;
+}
+
+/* Carousel 演示样式 */
+.carousel-demo {
+  padding: 24px 0;
+}
+
+.carousel-demo .demo-section {
+  margin-bottom: 48px;
+}
+
+.carousel-demo .demo-section h3 {
+  margin-bottom: 16px;
+  color: var(--my-color-gray-6);
+}
+
+.demo-carousel {
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.custom-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.custom-slide h3 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.custom-slide p {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.slide-index {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.custom-arrow {
+  font-size: 24px;
+}
+
+.controls span {
+  padding: 8px 16px;
+  background: white;
+  border-radius: 4px;
+  font-weight: 500;
 }
 </style>
