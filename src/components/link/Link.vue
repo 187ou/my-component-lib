@@ -24,11 +24,11 @@
         <slot name="prefix" />
       </template>
       <template v-else-if="prefixIcon">
-        <my-icon :name="prefixIcon" :size="iconSize" />
+        <lin-icon :name="prefixIcon" :size="iconSize" />
       </template>
       <template v-else-if="icon">
         <!-- 兼容旧 icon 用法 -->
-        <my-icon :name="icon" :size="iconSize" />
+        <lin-icon :name="icon" :size="iconSize" />
       </template>
     </span>
 
@@ -46,7 +46,7 @@
         <slot name="suffix" />
       </template>
       <template v-else-if="suffixIcon">
-        <my-icon :name="suffixIcon" :size="iconSize" />
+        <lin-icon :name="suffixIcon" :size="iconSize" />
       </template>
     </span>
 
@@ -75,7 +75,7 @@ const props = withDefaults(defineProps<LinkProps>(), {
 })
 
 // 静默处理未使用变量问题
-import { MyIcon } from '../icon'
+import { LinIcon } from '../icon'
 import { computed } from 'vue'
 
 // 静默处理未使用变量问题

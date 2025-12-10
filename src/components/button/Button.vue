@@ -22,7 +22,7 @@
     <template v-if="$slots.icon">
       <slot name="icon"></slot>
     </template>
-    <my-icon v-else-if="icon" :name="icon" :size="iconSize"></my-icon>
+    <lin-icon v-else-if="icon" :name="icon" :size="iconSize"></lin-icon>
 
     <!-- 加载状态 -->
     <span class="my-btn__loading" v-if="loading">⏳</span>
@@ -36,7 +36,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { MyIcon } from '../icon'
+import { LinIcon } from '../icon'
 import type { ButtonProps, ButtonEmits } from './button-types'
 
 // Props 定义

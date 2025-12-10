@@ -6,45 +6,54 @@
     <section class="demo-section">
       <h2>Button 组件测试</h2>
       <div class="demo-buttons">
-        <my-button>默认按钮</my-button>
-        <my-button type="success">成功按钮</my-button>
-        <my-button type="warning" size="large">大号警告按钮</my-button>
-        <my-button type="danger" disabled>禁用按钮</my-button>
-        <my-button loading>加载中按钮</my-button>
+        <lin-button>默认按钮</lin-button>
+        <lin-button type="success">成功按钮</lin-button>
+        <lin-button type="warning" size="large">大号警告按钮</lin-button>
+        <lin-button type="danger" disabled>禁用按钮</lin-button>
+        <lin-button loading>加载中按钮</lin-button>
       </div>
     </section>
 
     <div>
       <h2>Icon 组件</h2>
-      <my-icon name="search" size="24px" color="#409eff"></my-icon>
-      <my-icon name="edit" size="24px" color="#67c23a"></my-icon>
+      <lin-icon name="search" size="24px" color="#409eff"></lin-icon>
+      <lin-icon name="edit" size="24px" color="#67c23a"></lin-icon>
 
       <h2>Button 集成 Icon</h2>
-      <my-button type="primary" icon="search">搜索按钮</my-button>
+      <lin-button type="primary" icon="search">搜索按钮</lin-button>
 
       <h2>Input 集成 Icon</h2>
-      <my-input v-model="inputValue" placeholder="搜索" prefix-icon="search" clearable></my-input>
+      <lin-input v-model="inputValue" placeholder="搜索" prefix-icon="search" clearable></lin-input>
 
       <h2>Link 集成 Icon</h2>
-      <h2>Avatar 组件</h2>
-      <my-link href="#" icon="edit">百度一下</my-link>
+      <lin-link href="#" icon="edit">百度一下</lin-link>
 
       <h2>Avatar 测试</h2>
       <div class="demo-avatars">
-        <my-avatar src="https://placehold.co/150x150.png" :size="64" />
-        <my-avatar icon="user" :size="64" />
-        <my-avatar text="Alice" :size="64" />
+        <lin-avatar src="https://placehold.co/150x150.png" :size="64" />
+        <lin-avatar icon="user" :size="64" />
+        <lin-avatar text="Alice" :size="64" />
       </div>
+
+      <h2>Card 组件</h2>
+      <lin-card header="标题" sub-header="副标题" :hoverable="true" shadow="hover">
+        这里是卡片内容
+        <template #footer>
+          <lin-button size="small">操作</lin-button>
+        </template>
+      </lin-card>
+
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { MyButton, MyIcon, MyInput, MyLink, MyAvatar } from '../index'
+import { LinButton, LinIcon, LinInput, LinLink, LinAvatar, LinCard } from '../index'
 import {ref} from "vue";
 
 const inputValue = ref('')
 </script>
+
 
 <style scoped>
 .demo-container {

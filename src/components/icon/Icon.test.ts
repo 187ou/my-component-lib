@@ -1,12 +1,12 @@
 // src/components/icon/Icon.test.ts
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { MyIcon } from './index'
+import { LinIcon } from './index'
 
 describe('MyIcon', () => {
   // 测试基本渲染
   it('should render with correct name', () => {
-    const wrapper = mount(MyIcon, {
+    const wrapper = mount(LinIcon, {
       props: { name: 'search' }
     })
     const svg = wrapper.find('svg')
@@ -20,7 +20,7 @@ describe('MyIcon', () => {
 
   // 测试尺寸
   it('should render with correct size', () => {
-    const wrapper = mount(MyIcon, {
+    const wrapper = mount(LinIcon, {
       props: { name: 'search', size: '24px' }
     })
     const svg = wrapper.find('svg')
@@ -30,7 +30,7 @@ describe('MyIcon', () => {
 
   // 测试颜色
   it('should render with correct color', () => {
-    const wrapper = mount(MyIcon, {
+    const wrapper = mount(LinIcon, {
       props: { name: 'search', color: '#ff0000' }
     })
     const svg = wrapper.find('svg')

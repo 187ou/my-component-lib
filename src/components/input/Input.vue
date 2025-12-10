@@ -16,7 +16,7 @@
       <template v-if="$slots.prefix">
         <slot name="prefix"></slot>
       </template>
-      <my-icon v-else-if="prefixIcon" :name="prefixIcon" :size="iconSize"></my-icon>
+      <lin-icon v-else-if="prefixIcon" :name="prefixIcon" :size="iconSize"></lin-icon>
     </div>
 
     <!-- 输入框 -->
@@ -60,7 +60,7 @@
       <template v-if="$slots.suffix">
         <slot name="suffix"></slot>
       </template>
-      <my-icon v-else-if="suffixIcon" :name="suffixIcon" :size="iconSize"></my-icon>
+      <lin-icon v-else-if="suffixIcon" :name="suffixIcon" :size="iconSize"></lin-icon>
 
       <!-- 清空按钮 -->
       <button
@@ -79,7 +79,7 @@
 <script setup lang="ts">
 import {computed, ref, watch} from 'vue'
 import type { InputProps, InputEmits } from './input-types'
-import { MyIcon } from '../icon'
+import { LinIcon } from '../icon'
 
 // Props 定义
 const props = withDefaults(defineProps<InputProps>(), {

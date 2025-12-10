@@ -2,13 +2,14 @@
 import 'virtual:svg-icons-register';
 import './styles/index.scss'; // 全局样式入口
 // 导入组件
-import { MyButton } from './components/button';
-import { MyInput } from './components/input';
-import { MyLink } from './components/link';
-import { MyIcon } from './components/icon';
-import { MyAvatar } from './components/avatar';
+import { LinButton } from './components/button';
+import { LinInput } from './components/input';
+import { LinLink } from './components/link';
+import { LinIcon } from './components/icon';
+import { LinAvatar } from './components/avatar';
+import { LinCard } from './components/card';
 // 组件列表（用于批量注册）
-const components = [MyButton, MyLink, MyInput, MyIcon, MyAvatar];
+const components = [LinButton, LinLink, LinInput, LinIcon, LinAvatar, LinCard];
 // 全局注册方法
 const install = (app) => {
     components.forEach(component => {
@@ -16,7 +17,7 @@ const install = (app) => {
     });
 };
 // 按需导出组件
-export { MyButton, MyLink, MyInput, MyAvatar, MyIcon };
+export { LinButton, LinLink, LinInput, LinAvatar, LinIcon, LinCard };
 // 默认导出（支持 app.use() 全局注册）
 export default {
     install

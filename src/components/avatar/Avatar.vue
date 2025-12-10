@@ -12,7 +12,7 @@
       />
     </template>
     <template v-else-if="icon">
-      <my-icon :name="icon" :size="computedIconSize" />
+      <lin-icon :name="icon" :size="computedIconSize" />
     </template>
     <template v-else>
       <span class="my-avatar__text">{{ initials }}</span>
@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { MyIcon } from '../icon'
+import { LinIcon } from '../icon'
 import type { AvatarProps, AvatarEmits } from './avatar-types'
 
 const props = withDefaults(defineProps<AvatarProps>(), {

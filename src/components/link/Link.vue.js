@@ -12,7 +12,7 @@ const props = withDefaults(defineProps(), {
     openInNewTab: false
 });
 // 静默处理未使用变量问题
-import { MyIcon } from '../icon';
+import { LinIcon } from '../icon';
 import { computed } from 'vue';
 // 静默处理未使用变量问题
 const iconSize = computed(() => {
@@ -79,8 +79,8 @@ if (__VLS_ctx.$slots.prefix || __VLS_ctx.prefixIcon || __VLS_ctx.icon) {
         var __VLS_0 = {};
     }
     else if (__VLS_ctx.prefixIcon) {
-        const __VLS_2 = {}.MyIcon;
-        /** @type {[typeof __VLS_components.MyIcon, typeof __VLS_components.myIcon, ]} */ ;
+        const __VLS_2 = {}.LinIcon;
+        /** @type {[typeof __VLS_components.LinIcon, typeof __VLS_components.linIcon, ]} */ ;
         // @ts-ignore
         const __VLS_3 = __VLS_asFunctionalComponent(__VLS_2, new __VLS_2({
             name: (__VLS_ctx.prefixIcon),
@@ -92,8 +92,8 @@ if (__VLS_ctx.$slots.prefix || __VLS_ctx.prefixIcon || __VLS_ctx.icon) {
         }, ...__VLS_functionalComponentArgsRest(__VLS_3));
     }
     else if (__VLS_ctx.icon) {
-        const __VLS_6 = {}.MyIcon;
-        /** @type {[typeof __VLS_components.MyIcon, typeof __VLS_components.myIcon, ]} */ ;
+        const __VLS_6 = {}.LinIcon;
+        /** @type {[typeof __VLS_components.LinIcon, typeof __VLS_components.linIcon, ]} */ ;
         // @ts-ignore
         const __VLS_7 = __VLS_asFunctionalComponent(__VLS_6, new __VLS_6({
             name: (__VLS_ctx.icon),
@@ -117,8 +117,8 @@ if (__VLS_ctx.$slots.suffix || __VLS_ctx.suffixIcon) {
         var __VLS_12 = {};
     }
     else if (__VLS_ctx.suffixIcon) {
-        const __VLS_14 = {}.MyIcon;
-        /** @type {[typeof __VLS_components.MyIcon, typeof __VLS_components.myIcon, ]} */ ;
+        const __VLS_14 = {}.LinIcon;
+        /** @type {[typeof __VLS_components.LinIcon, typeof __VLS_components.linIcon, ]} */ ;
         // @ts-ignore
         const __VLS_15 = __VLS_asFunctionalComponent(__VLS_14, new __VLS_14({
             name: (__VLS_ctx.suffixIcon),
@@ -145,7 +145,7 @@ var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {
         return {
-            MyIcon: MyIcon,
+            LinIcon: LinIcon,
             iconSize: iconSize,
             handleClick: handleClick,
         };

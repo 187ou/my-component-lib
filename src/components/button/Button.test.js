@@ -1,11 +1,11 @@
 // src/components/Button/Button.test.ts
 import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
-import { MyButton } from './index';
+import { LinButton } from './index';
 describe('MyButton', () => {
     // 测试 Props 渲染
     it('should render with correct type and size', () => {
-        const wrapper = mount(MyButton, {
+        const wrapper = mount(LinButton, {
             props: { type: 'success', size: 'small' },
             slots: { default: 'Test Button' }
         });
@@ -15,7 +15,7 @@ describe('MyButton', () => {
     // 测试事件触发
     it('should emit click event when clicked', async () => {
         const onClick = vi.fn();
-        const wrapper = mount(MyButton, {
+        const wrapper = mount(LinButton, {
             slots: { default: 'Click Me' },
             props: { onClick }
         });
@@ -25,7 +25,7 @@ describe('MyButton', () => {
     // 测试禁用状态
     it('should not emit click event when disabled', async () => {
         const onClick = vi.fn();
-        const wrapper = mount(MyButton, {
+        const wrapper = mount(LinButton, {
             slots: { default: 'Disabled' },
             props: { disabled: true, onClick }
         });

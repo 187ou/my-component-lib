@@ -1,6 +1,6 @@
 /// <reference types="../../../node_modules/.vue-global-types/vue_3.5_0_0_0.d.ts" />
 import { computed, ref, watch } from 'vue';
-import { MyIcon } from '../icon';
+import { LinIcon } from '../icon';
 const props = withDefaults(defineProps(), {
     type: 'text',
     size: 'medium',
@@ -128,8 +128,8 @@ if (__VLS_ctx.$slots.prefix) {
     var __VLS_0 = {};
 }
 else if (__VLS_ctx.prefixIcon) {
-    const __VLS_2 = {}.MyIcon;
-    /** @type {[typeof __VLS_components.MyIcon, typeof __VLS_components.myIcon, typeof __VLS_components.MyIcon, typeof __VLS_components.myIcon, ]} */ ;
+    const __VLS_2 = {}.LinIcon;
+    /** @type {[typeof __VLS_components.LinIcon, typeof __VLS_components.linIcon, typeof __VLS_components.LinIcon, typeof __VLS_components.linIcon, ]} */ ;
     // @ts-ignore
     const __VLS_3 = __VLS_asFunctionalComponent(__VLS_2, new __VLS_2({
         name: (__VLS_ctx.prefixIcon),
@@ -178,8 +178,8 @@ if (__VLS_ctx.$slots.suffix) {
     var __VLS_6 = {};
 }
 else if (__VLS_ctx.suffixIcon) {
-    const __VLS_8 = {}.MyIcon;
-    /** @type {[typeof __VLS_components.MyIcon, typeof __VLS_components.myIcon, typeof __VLS_components.MyIcon, typeof __VLS_components.myIcon, ]} */ ;
+    const __VLS_8 = {}.LinIcon;
+    /** @type {[typeof __VLS_components.LinIcon, typeof __VLS_components.linIcon, typeof __VLS_components.LinIcon, typeof __VLS_components.linIcon, ]} */ ;
     // @ts-ignore
     const __VLS_9 = __VLS_asFunctionalComponent(__VLS_8, new __VLS_8({
         name: (__VLS_ctx.suffixIcon),
@@ -210,7 +210,7 @@ var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {
         return {
-            MyIcon: MyIcon,
+            LinIcon: LinIcon,
             inputRef: inputRef,
             isFocused: isFocused,
             isPasswordVisible: isPasswordVisible,

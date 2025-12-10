@@ -1,13 +1,13 @@
 // src/components/avatar/Avatar.test.ts
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { MyAvatar } from './index'
+import { LinAvatar } from './index'
 
 describe('MyAvatar', () => {
   // 渲染图片
   it('should render img when src is provided', () => {
     const src = 'https://example.com/avatar.png'
-    const wrapper = mount(MyAvatar, {
+    const wrapper = mount(LinAvatar, {
       props: { src }
     })
     const img = wrapper.find('img')
@@ -18,7 +18,7 @@ describe('MyAvatar', () => {
   // 加载事件
   it('should emit load event', async () => {
     const src = 'https://example.com/avatar.png'
-    const wrapper = mount(MyAvatar, {
+    const wrapper = mount(LinAvatar, {
       props: { src }
     })
     const img = wrapper.find('img')
@@ -28,7 +28,7 @@ describe('MyAvatar', () => {
 
   // 加载失败回退
   it('should handle image error and emit error event', async () => {
-    const wrapper = mount(MyAvatar, {
+    const wrapper = mount(LinAvatar, {
       props: { src: 'invalid.png' }
     })
     const img = wrapper.find('img')
@@ -41,7 +41,7 @@ describe('MyAvatar', () => {
 
   // 图标回退
   it('should render icon fallback when icon prop is provided without src', () => {
-    const wrapper = mount(MyAvatar, {
+    const wrapper = mount(LinAvatar, {
       props: { icon: 'user' }
     })
     // 根据实际渲染的DOM结构调整断言
@@ -51,7 +51,7 @@ describe('MyAvatar', () => {
 
   // 文本回退
   it('should render text fallback when only text is provided', () => {
-    const wrapper = mount(MyAvatar, {
+    const wrapper = mount(LinAvatar, {
       props: { text: 'Alice' }
     })
     const textEl = wrapper.find('.my-avatar__text')
@@ -61,7 +61,7 @@ describe('MyAvatar', () => {
 
   // 尺寸与形状
   it('should apply correct size and shape classes', () => {
-    const wrapper = mount(MyAvatar, {
+    const wrapper = mount(LinAvatar, {
       props: { size: 40, shape: 'square' }
     })
     const root = wrapper.find('.my-avatar')

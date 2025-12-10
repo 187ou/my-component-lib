@@ -1,6 +1,6 @@
 /// <reference types="../../../node_modules/.vue-global-types/vue_3.5_0_0_0.d.ts" />
 import { computed } from 'vue';
-import { MyIcon } from '../icon';
+import { LinIcon } from '../icon';
 const props = withDefaults(defineProps(), {
     type: 'primary',
     size: 'medium',
@@ -67,8 +67,8 @@ if (__VLS_ctx.$slots.icon) {
     var __VLS_0 = {};
 }
 else if (__VLS_ctx.icon) {
-    const __VLS_2 = {}.MyIcon;
-    /** @type {[typeof __VLS_components.MyIcon, typeof __VLS_components.myIcon, typeof __VLS_components.MyIcon, typeof __VLS_components.myIcon, ]} */ ;
+    const __VLS_2 = {}.LinIcon;
+    /** @type {[typeof __VLS_components.LinIcon, typeof __VLS_components.linIcon, typeof __VLS_components.LinIcon, typeof __VLS_components.linIcon, ]} */ ;
     // @ts-ignore
     const __VLS_3 = __VLS_asFunctionalComponent(__VLS_2, new __VLS_2({
         name: (__VLS_ctx.icon),
@@ -96,7 +96,7 @@ var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {
         return {
-            MyIcon: MyIcon,
+            LinIcon: LinIcon,
             iconSize: iconSize,
         };
     },
