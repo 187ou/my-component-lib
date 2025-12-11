@@ -4,6 +4,7 @@ import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
 import inspect from 'vite-plugin-inspect'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 export default defineConfig(({ mode }) => {
   const isTest = mode === 'test'
@@ -43,7 +44,15 @@ export default defineConfig(({ mode }) => {
           ]
         }
       }),
-      inspect()
+      inspect(),
+      visualizer({
+        filename: 'dist/stats.html',
+        open: true,
+        gzipSize: true,
+        brotliSize: true,
+        emitFile: true,
+        template: 'treemap'
+      })
     ],
     resolve: {
       alias: { '@': resolve(__dirname, 'src') },

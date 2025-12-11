@@ -65,6 +65,7 @@
     "eslint-plugin-vue": "^9.23.0",
     "fast-glob": "^3.3.3",
     "jsdom": "^27.2.0",
+    "rollup-plugin-visualizer": "^6.0.5",
     "sass": "^1.94.2",
     "terser": "^5.44.1",
     "typescript": "^5.2.2",

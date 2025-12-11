@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LinCard > component snapshot matches 1`] = `
+"<div data-v-8955d826="" class="my-card my-card--shadow-always my-card--border">
+  <!-- Cover Image -->
+  <div data-v-8955d826="" class="my-card__cover"><img data-v-8955d826="" src="https://example.com/cover.jpg" alt="card-cover" loading="lazy"></div><!-- Header -->
+  <div data-v-8955d826="" class="my-card__header">
+    <h3 data-v-8955d826="" class="my-card__title">Card Title</h3>
+    <p data-v-8955d826="" class="my-card__subtitle">Sub Title</p>
+  </div><!-- Body -->
+  <div data-v-8955d826="" class="my-card__body">This is body content</div><!-- Footer -->
+  <div data-v-8955d826="" class="my-card__footer">Footer Content</div>
+</div>"
+`;

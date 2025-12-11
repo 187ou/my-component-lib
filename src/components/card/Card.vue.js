@@ -9,8 +9,13 @@ const props = withDefaults(defineProps(), {
     cover: ''
 });
 const __VLS_emit = defineEmits();
-const hasHeader = computed(() => !!props.header || !!props.subHeader || !!useSlots().header);
-const hasCover = computed(() => !!props.cover || !!useSlots().cover);
+const slots = useSlots();
+const hasHeader = computed(() => {
+    return props.header || props.subHeader || slots.header;
+});
+const hasCover = computed(() => {
+    return props.cover || slots.cover;
+});
 // 动态类
 const cardClasses = computed(() => [
     `my-card--shadow-${props.shadow}`,
@@ -47,6 +52,7 @@ if (__VLS_ctx.hasCover) {
     __VLS_asFunctionalElement(__VLS_intrinsicElements.img)({
         src: (__VLS_ctx.cover),
         alt: "card-cover",
+        loading: "lazy",
     });
     var __VLS_0 = {};
 }
@@ -59,14 +65,16 @@ if (__VLS_ctx.hasHeader) {
             } },
         ...{ class: "my-card__header" },
     });
-    if (__VLS_ctx.$slots.header) {
+    if (__VLS_ctx.slots.header) {
         var __VLS_2 = {};
     }
     else {
-        __VLS_asFunctionalElement(__VLS_intrinsicElements.h3, __VLS_intrinsicElements.h3)({
-            ...{ class: "my-card__title" },
-        });
-        (__VLS_ctx.header);
+        if (__VLS_ctx.header) {
+            __VLS_asFunctionalElement(__VLS_intrinsicElements.h3, __VLS_intrinsicElements.h3)({
+                ...{ class: "my-card__title" },
+            });
+            (__VLS_ctx.header);
+        }
         if (__VLS_ctx.subHeader) {
             __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({
                 ...{ class: "my-card__subtitle" },
@@ -77,10 +85,9 @@ if (__VLS_ctx.hasHeader) {
 }
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
     ...{ class: "my-card__body" },
-    ...{ style: (__VLS_ctx.bodyStyle) },
 });
 var __VLS_4 = {};
-if (__VLS_ctx.$slots.footer) {
+if (__VLS_ctx.slots.footer) {
     __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
         ...{ class: "my-card__footer" },
     });
@@ -99,6 +106,7 @@ var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {
         return {
+            slots: slots,
             hasHeader: hasHeader,
             hasCover: hasCover,
             cardClasses: cardClasses,

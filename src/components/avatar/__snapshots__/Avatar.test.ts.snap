@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MyAvatar > component snapshot 1`] = `"<span data-v-3474f026="" class="my-avatar my-avatar--circle" style="width: 32px; height: 32px; line-height: 32px; font-size: calc(16px);"><img data-v-3474f026="" src="test.png" style="object-fit: cover;" crossorigin="anonymous"></span>"`;

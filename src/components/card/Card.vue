@@ -1,4 +1,3 @@
-<!-- src/components/card/Card.vue -->
 <template>
   <div
     class="my-card"
@@ -7,7 +6,7 @@
   >
     <!-- Cover Image -->
     <div v-if="hasCover" class="my-card__cover">
-      <img :src="cover" alt="card-cover" />
+      <img :src="cover" alt="card-cover" loading="lazy" />
       <slot name="cover"></slot>
     </div>
 
@@ -17,22 +16,20 @@
       class="my-card__header"
       @click.stop="$emit('header-click', $event)"
     >
-      <template v-if="$slots.header">
-        <slot name="header"></slot>
-      </template>
+      <slot v-if="slots.header" name="header" />
       <template v-else>
-        <h3 class="my-card__title">{{ header }}</h3>
+        <h3 v-if="header" class="my-card__title">{{ header }}</h3>
         <p v-if="subHeader" class="my-card__subtitle">{{ subHeader }}</p>
       </template>
     </div>
 
     <!-- Body -->
-    <div class="my-card__body" :style="bodyStyle">
+    <div class="my-card__body">
       <slot />
     </div>
 
     <!-- Footer -->
-    <div v-if="$slots.footer" class="my-card__footer">
+    <div v-if="slots.footer" class="my-card__footer">
       <slot name="footer"></slot>
     </div>
   </div>
@@ -55,8 +52,15 @@ const props = withDefaults(defineProps<CardProps>(), {
 // Emits
 defineEmits<CardEmits>()
 
-const hasHeader = computed(() => !!props.header || !!props.subHeader || !!useSlots().header)
-const hasCover = computed(() => !!props.cover || !!useSlots().cover)
+const slots = useSlots()
+
+const hasHeader = computed(() => {
+  return props.header || props.subHeader || slots.header
+})
+
+const hasCover = computed(() => {
+  return props.cover || slots.cover
+})
 
 // 动态类
 const cardClasses = computed(() => [

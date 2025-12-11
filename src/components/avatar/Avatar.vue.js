@@ -14,9 +14,11 @@ const emit = defineEmits();
 // 当前展示的 src（可能因加载失败而置空）
 const currentSrc = ref(props.src || '');
 const hasSrc = computed(() => !!currentSrc.value);
+const hasError = ref(false);
 // 处理图片加载失败
 const handleError = (e) => {
     currentSrc.value = '';
+    hasError.value = true;
     emit('error', e);
 };
 // 头像大小（像素或预设 size）
@@ -72,11 +74,11 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.
     ...{ class: (__VLS_ctx.avatarClass) },
     ...{ style: (__VLS_ctx.avatarStyle) },
 });
-if (__VLS_ctx.hasSrc) {
+if (__VLS_ctx.hasSrc && !__VLS_ctx.hasError) {
     __VLS_asFunctionalElement(__VLS_intrinsicElements.img)({
         ...{ onError: (__VLS_ctx.handleError) },
         ...{ onLoad: (...[$event]) => {
-                if (!(__VLS_ctx.hasSrc))
+                if (!(__VLS_ctx.hasSrc && !__VLS_ctx.hasError))
                     return;
                 __VLS_ctx.$emit('load', $event);
             } },
@@ -86,18 +88,31 @@ if (__VLS_ctx.hasSrc) {
         crossorigin: "anonymous",
     });
 }
-else if (__VLS_ctx.icon) {
+else if (__VLS_ctx.hasError && props.errorIcon) {
     const __VLS_0 = {}.LinIcon;
     /** @type {[typeof __VLS_components.LinIcon, typeof __VLS_components.linIcon, ]} */ ;
     // @ts-ignore
     const __VLS_1 = __VLS_asFunctionalComponent(__VLS_0, new __VLS_0({
-        name: (__VLS_ctx.icon),
+        name: (props.errorIcon),
         size: (__VLS_ctx.computedIconSize),
     }));
     const __VLS_2 = __VLS_1({
-        name: (__VLS_ctx.icon),
+        name: (props.errorIcon),
         size: (__VLS_ctx.computedIconSize),
     }, ...__VLS_functionalComponentArgsRest(__VLS_1));
+}
+else if (__VLS_ctx.icon) {
+    const __VLS_4 = {}.LinIcon;
+    /** @type {[typeof __VLS_components.LinIcon, typeof __VLS_components.linIcon, ]} */ ;
+    // @ts-ignore
+    const __VLS_5 = __VLS_asFunctionalComponent(__VLS_4, new __VLS_4({
+        name: (__VLS_ctx.icon),
+        size: (__VLS_ctx.computedIconSize),
+    }));
+    const __VLS_6 = __VLS_5({
+        name: (__VLS_ctx.icon),
+        size: (__VLS_ctx.computedIconSize),
+    }, ...__VLS_functionalComponentArgsRest(__VLS_5));
 }
 else {
     __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({
@@ -113,6 +128,7 @@ const __VLS_self = (await import('vue')).defineComponent({
             LinIcon: LinIcon,
             currentSrc: currentSrc,
             hasSrc: hasSrc,
+            hasError: hasError,
             handleError: handleError,
             avatarClass: avatarClass,
             avatarStyle: avatarStyle,

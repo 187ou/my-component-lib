@@ -1,7 +1,7 @@
 <!-- src/components/Avatar/Avatar.vue -->
 <template>
   <span :class="avatarClass" :style="avatarStyle">
-    <template v-if="hasSrc">
+    <template v-if="hasSrc && !hasError">
       <img
         :src="currentSrc"
         :alt="alt"
@@ -10,6 +10,9 @@
         @error="handleError"
         @load="$emit('load', $event)"
       />
+    </template>
+    <template v-else-if="hasError && props.errorIcon">
+      <lin-icon :name="props.errorIcon" :size="computedIconSize" />
     </template>
     <template v-else-if="icon">
       <lin-icon :name="icon" :size="computedIconSize" />
@@ -41,9 +44,11 @@ const emit = defineEmits<AvatarEmits>()
 const currentSrc = ref(props.src || '')
 const hasSrc = computed(() => !!currentSrc.value)
 
+const hasError = ref(false)
 // 处理图片加载失败
 const handleError = (e: Event) => {
   currentSrc.value = ''
+  hasError.value = true
   emit('error', e)
 }
 
