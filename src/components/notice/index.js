@@ -1,0 +1,1 @@
+export { LinWarning } from './warning';

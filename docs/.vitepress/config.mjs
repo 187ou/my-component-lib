@@ -12,15 +12,29 @@ export default defineConfig({
     sidebar: {
       '/components/': [
         {
-          text: 'Components',
+          text: 'Basic Components',
           items: [
-            { text: 'Avatar', link: '/components/avatar'},
-            { text: 'Button', link: '/components/button' },
-            { text: 'Card', link: '/components/card' },
-            { text: 'Carousel', link: '/components/carousel'},
-            { text: 'Input', link: '/components/input' },
-            { text: 'Icon', link: '/components/icon'},
-            { text: 'Link', link: '/components/link'},
+            { text: 'Avatar', link: '/components/basic/avatar'},
+            { text: 'Button', link: '/components/basic/button' },
+            { text: 'Card', link: '/components/basic/card' },
+            { text: 'Carousel', link: '/components/basic/carousel'},
+            { text: 'Dropdown', link: '/components/basic/dropdown' },
+            { text: 'Input', link: '/components/basic/input' },
+            { text: 'Icon', link: '/components/basic/icon'},
+            { text: 'Link', link: '/components/basic/link'},
+            { text: 'Tag', link: '/components/basic/tag'},
+          ]
+        },
+        {
+          text: 'Notice Components',
+          items: [
+            { text: 'Warning', link: '/components/notice/warning' },
+            { text: 'Message', link: '/components/message' },
+            { text: 'Notification', link: '/components/notification' },
+            { text: 'Progress', link: '/components/progress' },
+            { text: 'Skeleton', link: '/components/skeleton' },
+            { text: 'Spin', link: '/components/spin' },
+            { text: 'Timeline', link: '/components/timeline' },
           ]
         }
       ]

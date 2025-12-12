@@ -143,13 +143,44 @@
           </div>
         </div>
       </div>
+
+      <div>
+        <h2>Tag 测试</h2>
+        <lin-tag type="success">成功</lin-tag>
+        <lin-tag type="danger" closeable>可关闭</lin-tag>
+        <lin-tag type="primary" icon="star">带图标</lin-tag>
+        <lin-tag outline round clickable>Outline Tag</lin-tag>
+        <lin-tag loading>加载中</lin-tag>
+      </div>
+
+      <div>
+        <h2>Dropdown 测试</h2>
+        <lin-dropdown>
+          <lin-button>
+            Dropdown
+            <lin-icon name="arrow-down" />
+          </lin-button>
+          <template #dropdown>
+            <lin-dropdown-menu>
+              <lin-dropdown-item>选项 1</lin-dropdown-item>
+              <lin-dropdown-item>选项 2</lin-dropdown-item>
+              <lin-dropdown-item>选项 3</lin-dropdown-item>
+            </lin-dropdown-menu>
+          </template>
+        </lin-dropdown>
+      </div>
+
+      <div>
+        <h2>Notice 测试</h2>
+        <lin-warning title="标题" description="这是内容" />
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { LinButton, LinIcon, LinInput, LinLink, LinAvatar, LinCard, LinCarousel } from '../index'
+import { LinButton, LinIcon, LinInput, LinLink, LinAvatar, LinCard, LinCarousel, LinTag, LinDropdown, LinWarning } from '../index'
 
 const inputValue = ref('')
 

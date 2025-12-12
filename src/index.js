@@ -1,16 +1,11 @@
 // src/index.ts
 import 'virtual:svg-icons-register';
 import './styles/index.scss';
-// 导入组件
-import { LinButton } from './components/button';
-import { LinInput } from './components/input';
-import { LinLink } from './components/link';
-import { LinIcon } from './components/icon';
-import { LinAvatar } from './components/avatar';
-import { LinCard } from './components/card';
-import { LinCarousel } from './components/carousel';
+// 按功能模块导入
+import * as BasicComponents from './components/basic';
+import * as NoticeComponents from './components/notice';
 // 组件列表（用于批量注册）
-const components = [LinButton, LinLink, LinInput, LinIcon, LinAvatar, LinCard, LinCarousel];
+const components = [...Object.values(BasicComponents), ...Object.values(NoticeComponents)];
 // 全局注册方法
 const install = (app) => {
     components.forEach(component => {
@@ -18,7 +13,8 @@ const install = (app) => {
     });
 };
 // 按需导出组件
-export { LinButton, LinLink, LinInput, LinAvatar, LinIcon, LinCard, LinCarousel };
+export * from './components/basic';
+export * from './components/notice';
 // 默认导出（支持 app.use() 全局注册）
 export default {
     install

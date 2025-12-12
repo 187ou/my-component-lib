@@ -1,6 +1,6 @@
 /// <reference types="../../node_modules/.vue-global-types/vue_3.5_0_0_0.d.ts" />
 import { ref } from 'vue';
-import { LinButton, LinIcon, LinInput, LinLink, LinAvatar, LinCard, LinCarousel } from '../index';
+import { LinButton, LinIcon, LinInput, LinLink, LinAvatar, LinCard, LinCarousel, LinTag, LinDropdown, LinWarning } from '../index';
 const inputValue = ref('');
 // Carousel 相关数据
 const imageItems = [
@@ -432,6 +432,140 @@ const __VLS_90 = __VLS_89({
     autoplay: true,
     interval: (3000),
 }, ...__VLS_functionalComponentArgsRest(__VLS_89));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
+const __VLS_92 = {}.LinTag;
+/** @type {[typeof __VLS_components.LinTag, typeof __VLS_components.linTag, typeof __VLS_components.LinTag, typeof __VLS_components.linTag, ]} */ ;
+// @ts-ignore
+const __VLS_93 = __VLS_asFunctionalComponent(__VLS_92, new __VLS_92({
+    type: "success",
+}));
+const __VLS_94 = __VLS_93({
+    type: "success",
+}, ...__VLS_functionalComponentArgsRest(__VLS_93));
+__VLS_95.slots.default;
+var __VLS_95;
+const __VLS_96 = {}.LinTag;
+/** @type {[typeof __VLS_components.LinTag, typeof __VLS_components.linTag, typeof __VLS_components.LinTag, typeof __VLS_components.linTag, ]} */ ;
+// @ts-ignore
+const __VLS_97 = __VLS_asFunctionalComponent(__VLS_96, new __VLS_96({
+    type: "danger",
+    closeable: true,
+}));
+const __VLS_98 = __VLS_97({
+    type: "danger",
+    closeable: true,
+}, ...__VLS_functionalComponentArgsRest(__VLS_97));
+__VLS_99.slots.default;
+var __VLS_99;
+const __VLS_100 = {}.LinTag;
+/** @type {[typeof __VLS_components.LinTag, typeof __VLS_components.linTag, typeof __VLS_components.LinTag, typeof __VLS_components.linTag, ]} */ ;
+// @ts-ignore
+const __VLS_101 = __VLS_asFunctionalComponent(__VLS_100, new __VLS_100({
+    type: "primary",
+    icon: "star",
+}));
+const __VLS_102 = __VLS_101({
+    type: "primary",
+    icon: "star",
+}, ...__VLS_functionalComponentArgsRest(__VLS_101));
+__VLS_103.slots.default;
+var __VLS_103;
+const __VLS_104 = {}.LinTag;
+/** @type {[typeof __VLS_components.LinTag, typeof __VLS_components.linTag, typeof __VLS_components.LinTag, typeof __VLS_components.linTag, ]} */ ;
+// @ts-ignore
+const __VLS_105 = __VLS_asFunctionalComponent(__VLS_104, new __VLS_104({
+    outline: true,
+    round: true,
+    clickable: true,
+}));
+const __VLS_106 = __VLS_105({
+    outline: true,
+    round: true,
+    clickable: true,
+}, ...__VLS_functionalComponentArgsRest(__VLS_105));
+__VLS_107.slots.default;
+var __VLS_107;
+const __VLS_108 = {}.LinTag;
+/** @type {[typeof __VLS_components.LinTag, typeof __VLS_components.linTag, typeof __VLS_components.LinTag, typeof __VLS_components.linTag, ]} */ ;
+// @ts-ignore
+const __VLS_109 = __VLS_asFunctionalComponent(__VLS_108, new __VLS_108({
+    loading: true,
+}));
+const __VLS_110 = __VLS_109({
+    loading: true,
+}, ...__VLS_functionalComponentArgsRest(__VLS_109));
+__VLS_111.slots.default;
+var __VLS_111;
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
+const __VLS_112 = {}.LinDropdown;
+/** @type {[typeof __VLS_components.LinDropdown, typeof __VLS_components.linDropdown, typeof __VLS_components.LinDropdown, typeof __VLS_components.linDropdown, ]} */ ;
+// @ts-ignore
+const __VLS_113 = __VLS_asFunctionalComponent(__VLS_112, new __VLS_112({}));
+const __VLS_114 = __VLS_113({}, ...__VLS_functionalComponentArgsRest(__VLS_113));
+__VLS_115.slots.default;
+const __VLS_116 = {}.LinButton;
+/** @type {[typeof __VLS_components.LinButton, typeof __VLS_components.linButton, typeof __VLS_components.LinButton, typeof __VLS_components.linButton, ]} */ ;
+// @ts-ignore
+const __VLS_117 = __VLS_asFunctionalComponent(__VLS_116, new __VLS_116({}));
+const __VLS_118 = __VLS_117({}, ...__VLS_functionalComponentArgsRest(__VLS_117));
+__VLS_119.slots.default;
+const __VLS_120 = {}.LinIcon;
+/** @type {[typeof __VLS_components.LinIcon, typeof __VLS_components.linIcon, ]} */ ;
+// @ts-ignore
+const __VLS_121 = __VLS_asFunctionalComponent(__VLS_120, new __VLS_120({
+    name: "arrow-down",
+}));
+const __VLS_122 = __VLS_121({
+    name: "arrow-down",
+}, ...__VLS_functionalComponentArgsRest(__VLS_121));
+var __VLS_119;
+{
+    const { dropdown: __VLS_thisSlot } = __VLS_115.slots;
+    const __VLS_124 = {}.LinDropdownMenu;
+    /** @type {[typeof __VLS_components.LinDropdownMenu, typeof __VLS_components.linDropdownMenu, typeof __VLS_components.LinDropdownMenu, typeof __VLS_components.linDropdownMenu, ]} */ ;
+    // @ts-ignore
+    const __VLS_125 = __VLS_asFunctionalComponent(__VLS_124, new __VLS_124({}));
+    const __VLS_126 = __VLS_125({}, ...__VLS_functionalComponentArgsRest(__VLS_125));
+    __VLS_127.slots.default;
+    const __VLS_128 = {}.LinDropdownItem;
+    /** @type {[typeof __VLS_components.LinDropdownItem, typeof __VLS_components.linDropdownItem, typeof __VLS_components.LinDropdownItem, typeof __VLS_components.linDropdownItem, ]} */ ;
+    // @ts-ignore
+    const __VLS_129 = __VLS_asFunctionalComponent(__VLS_128, new __VLS_128({}));
+    const __VLS_130 = __VLS_129({}, ...__VLS_functionalComponentArgsRest(__VLS_129));
+    __VLS_131.slots.default;
+    var __VLS_131;
+    const __VLS_132 = {}.LinDropdownItem;
+    /** @type {[typeof __VLS_components.LinDropdownItem, typeof __VLS_components.linDropdownItem, typeof __VLS_components.LinDropdownItem, typeof __VLS_components.linDropdownItem, ]} */ ;
+    // @ts-ignore
+    const __VLS_133 = __VLS_asFunctionalComponent(__VLS_132, new __VLS_132({}));
+    const __VLS_134 = __VLS_133({}, ...__VLS_functionalComponentArgsRest(__VLS_133));
+    __VLS_135.slots.default;
+    var __VLS_135;
+    const __VLS_136 = {}.LinDropdownItem;
+    /** @type {[typeof __VLS_components.LinDropdownItem, typeof __VLS_components.linDropdownItem, typeof __VLS_components.LinDropdownItem, typeof __VLS_components.linDropdownItem, ]} */ ;
+    // @ts-ignore
+    const __VLS_137 = __VLS_asFunctionalComponent(__VLS_136, new __VLS_136({}));
+    const __VLS_138 = __VLS_137({}, ...__VLS_functionalComponentArgsRest(__VLS_137));
+    __VLS_139.slots.default;
+    var __VLS_139;
+    var __VLS_127;
+}
+var __VLS_115;
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
+const __VLS_140 = {}.LinWarning;
+/** @type {[typeof __VLS_components.LinWarning, typeof __VLS_components.linWarning, ]} */ ;
+// @ts-ignore
+const __VLS_141 = __VLS_asFunctionalComponent(__VLS_140, new __VLS_140({
+    title: "标题",
+    description: "这是内容",
+}));
+const __VLS_142 = __VLS_141({
+    title: "标题",
+    description: "这是内容",
+}, ...__VLS_functionalComponentArgsRest(__VLS_141));
 /** @type {__VLS_StyleScopedClasses['demo-container']} */ ;
 /** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
 /** @type {__VLS_StyleScopedClasses['demo-buttons']} */ ;
@@ -468,6 +602,9 @@ const __VLS_self = (await import('vue')).defineComponent({
             LinAvatar: LinAvatar,
             LinCard: LinCard,
             LinCarousel: LinCarousel,
+            LinTag: LinTag,
+            LinDropdown: LinDropdown,
+            LinWarning: LinWarning,
             inputValue: inputValue,
             imageItems: imageItems,
             customItems: customItems,
