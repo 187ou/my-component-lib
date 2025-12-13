@@ -35,12 +35,11 @@ export default defineConfig({
           text: 'Notice Components',
           items: [
             { text: 'Warning', link: '/components/notice/warning' },
-            { text: 'Message', link: '/components/message' },
-            { text: 'Notification', link: '/components/notification' },
-            { text: 'Progress', link: '/components/progress' },
-            { text: 'Skeleton', link: '/components/skeleton' },
-            { text: 'Spin', link: '/components/spin' },
-            { text: 'Timeline', link: '/components/timeline' },
+            { text: 'Message', link: '/components/notice/message' },
+            { text: 'Loading', link: '/components/notice/loading' },
+            { text: 'Notification', link: '/components/notice/notification' },
+            { text: 'Progress', link: '/components/notice/progress' },
+            { text: 'Timeline', link: '/components/notice/timeline' },
           ]
         }
       ]

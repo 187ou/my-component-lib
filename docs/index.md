@@ -76,13 +76,20 @@ createApp(App).use(MyComponentLib).mount('#app')
 | tag 标签        | 可配置颜色、可关闭的标签 | [查看 →](components/basic/tag.md) |
 
 ### 表单组件 (Form)
-| 组件         | 说明                 | 文档                                   |
-|------------|--------------------|--------------------------------------|
-| warning 警告 | 用于展示警告信息 | [查看 →](components/notice/warning.md) |
+| 组件           | 说明                 | 文档                                        |
+|--------------|--------------------|-------------------------------------------|
+| warning 警告   | 用于展示警告信息 | [查看 →](components/notice/warning.md)      |
+| message 消息   | 用于展示消息提示 | [查看 →](components/notice/message.md)      |
+| progress 进度条 | 用于展示任务进度 | [查看 →](components/notice/progress.md)     |
+|notification 通知 | 用于展示通知 | [查看 →](components/notice/notification.md) |
+|timeline 时间轴 | 用于展示时间轴 | [查看 →](components/notice/timeline.md)     |
+|loading 加载中 | 用于展示加载状态 | [查看 →](components/notice/loading.md)      |
 
+---
 
 更多组件正在路上，敬请期待！
 
+### 参与贡献
 ::: tip 贡献指南
 欢迎提交 Issue & PR，一起让 My Component Lib 变得更好！
 :::

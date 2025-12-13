@@ -174,6 +174,32 @@
         <h2>Notice 测试</h2>
         <lin-warning title="标题" description="这是内容" />
       </div>
+
+      <div>
+        <h2>Loading 测试</h2>
+        <div class="loading-demo-simple">
+          <lin-loading visible text="默认加载" />
+          <lin-loading visible text="加载中..." type="spinner"/>
+          <lin-loading visible text="加载中..." type="dots"/>
+        </div>
+      </div>
+
+      <div>
+        <h2>Progress 测试</h2>
+        <lin-progress :percentage="30" />
+        <lin-progress :percentage="70" status="success" />
+        <lin-progress :percentage="45" type="circle" />
+        <lin-progress :percentage="80" color="skyblue" />
+      </div>
+
+      <div>
+        <h2>Timeline 测试</h2>
+        <lin-timeline>
+          <lin-timeline-item timestamp="2024-01-01">项目启动</lin-timeline-item>
+          <lin-timeline-item timestamp="2024-01-02" type="success">完成需求</lin-timeline-item>
+          <lin-timeline-item timestamp="2024-01-03" icon="check">发布上线</lin-timeline-item>
+        </lin-timeline>
+      </div>
     </div>
   </div>
 </template>
@@ -181,6 +207,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { LinButton, LinIcon, LinInput, LinLink, LinAvatar, LinCard, LinCarousel, LinTag, LinDropdown, LinWarning } from '../index'
+import { LinLoading, LinMessage, LinNotification, LinProgress, LinTimeline,  LinTimelineItem } from '../index'
+
+LinMessage.info('这是提示信息')
+LinNotification.success('这是成功提示')
 
 const inputValue = ref('')
 
@@ -212,6 +242,18 @@ const customItems = [
 </script>
 
 <style scoped>
+.loading-demo-simple {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.loading-demo-simple :deep(.my-loading) {
+  position: relative !important;
+  width: 120px;
+  height: 120px;
+}
+
 .demo-container {
   max-width: 1200px;
   margin: 0 auto;

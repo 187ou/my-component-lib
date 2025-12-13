@@ -1,6 +1,9 @@
 /// <reference types="../../node_modules/.vue-global-types/vue_3.5_0_0_0.d.ts" />
 import { ref } from 'vue';
 import { LinButton, LinIcon, LinInput, LinLink, LinAvatar, LinCard, LinCarousel, LinTag, LinDropdown, LinWarning } from '../index';
+import { LinLoading, LinMessage, LinNotification, LinProgress, LinTimeline, LinTimelineItem } from '../index';
+LinMessage.info('这是提示信息');
+LinNotification.success('这是成功提示');
 const inputValue = ref('');
 // Carousel 相关数据
 const imageItems = [
@@ -30,6 +33,7 @@ debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
 let __VLS_components;
 let __VLS_directives;
+/** @type {__VLS_StyleScopedClasses['loading-demo-simple']} */ ;
 /** @type {__VLS_StyleScopedClasses['carousel-demo']} */ ;
 /** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
 /** @type {__VLS_StyleScopedClasses['carousel-demo']} */ ;
@@ -566,6 +570,138 @@ const __VLS_142 = __VLS_141({
     title: "标题",
     description: "这是内容",
 }, ...__VLS_functionalComponentArgsRest(__VLS_141));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "loading-demo-simple" },
+});
+const __VLS_144 = {}.LinLoading;
+/** @type {[typeof __VLS_components.LinLoading, typeof __VLS_components.linLoading, ]} */ ;
+// @ts-ignore
+const __VLS_145 = __VLS_asFunctionalComponent(__VLS_144, new __VLS_144({
+    visible: true,
+    text: "默认加载",
+}));
+const __VLS_146 = __VLS_145({
+    visible: true,
+    text: "默认加载",
+}, ...__VLS_functionalComponentArgsRest(__VLS_145));
+const __VLS_148 = {}.LinLoading;
+/** @type {[typeof __VLS_components.LinLoading, typeof __VLS_components.linLoading, ]} */ ;
+// @ts-ignore
+const __VLS_149 = __VLS_asFunctionalComponent(__VLS_148, new __VLS_148({
+    visible: true,
+    text: "加载中...",
+    type: "spinner",
+}));
+const __VLS_150 = __VLS_149({
+    visible: true,
+    text: "加载中...",
+    type: "spinner",
+}, ...__VLS_functionalComponentArgsRest(__VLS_149));
+const __VLS_152 = {}.LinLoading;
+/** @type {[typeof __VLS_components.LinLoading, typeof __VLS_components.linLoading, ]} */ ;
+// @ts-ignore
+const __VLS_153 = __VLS_asFunctionalComponent(__VLS_152, new __VLS_152({
+    visible: true,
+    text: "加载中...",
+    type: "dots",
+}));
+const __VLS_154 = __VLS_153({
+    visible: true,
+    text: "加载中...",
+    type: "dots",
+}, ...__VLS_functionalComponentArgsRest(__VLS_153));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
+const __VLS_156 = {}.LinProgress;
+/** @type {[typeof __VLS_components.LinProgress, typeof __VLS_components.linProgress, ]} */ ;
+// @ts-ignore
+const __VLS_157 = __VLS_asFunctionalComponent(__VLS_156, new __VLS_156({
+    percentage: (30),
+}));
+const __VLS_158 = __VLS_157({
+    percentage: (30),
+}, ...__VLS_functionalComponentArgsRest(__VLS_157));
+const __VLS_160 = {}.LinProgress;
+/** @type {[typeof __VLS_components.LinProgress, typeof __VLS_components.linProgress, ]} */ ;
+// @ts-ignore
+const __VLS_161 = __VLS_asFunctionalComponent(__VLS_160, new __VLS_160({
+    percentage: (70),
+    status: "success",
+}));
+const __VLS_162 = __VLS_161({
+    percentage: (70),
+    status: "success",
+}, ...__VLS_functionalComponentArgsRest(__VLS_161));
+const __VLS_164 = {}.LinProgress;
+/** @type {[typeof __VLS_components.LinProgress, typeof __VLS_components.linProgress, ]} */ ;
+// @ts-ignore
+const __VLS_165 = __VLS_asFunctionalComponent(__VLS_164, new __VLS_164({
+    percentage: (45),
+    type: "circle",
+}));
+const __VLS_166 = __VLS_165({
+    percentage: (45),
+    type: "circle",
+}, ...__VLS_functionalComponentArgsRest(__VLS_165));
+const __VLS_168 = {}.LinProgress;
+/** @type {[typeof __VLS_components.LinProgress, typeof __VLS_components.linProgress, ]} */ ;
+// @ts-ignore
+const __VLS_169 = __VLS_asFunctionalComponent(__VLS_168, new __VLS_168({
+    percentage: (80),
+    color: "skyblue",
+}));
+const __VLS_170 = __VLS_169({
+    percentage: (80),
+    color: "skyblue",
+}, ...__VLS_functionalComponentArgsRest(__VLS_169));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
+const __VLS_172 = {}.LinTimeline;
+/** @type {[typeof __VLS_components.LinTimeline, typeof __VLS_components.linTimeline, typeof __VLS_components.LinTimeline, typeof __VLS_components.linTimeline, ]} */ ;
+// @ts-ignore
+const __VLS_173 = __VLS_asFunctionalComponent(__VLS_172, new __VLS_172({}));
+const __VLS_174 = __VLS_173({}, ...__VLS_functionalComponentArgsRest(__VLS_173));
+__VLS_175.slots.default;
+const __VLS_176 = {}.LinTimelineItem;
+/** @type {[typeof __VLS_components.LinTimelineItem, typeof __VLS_components.linTimelineItem, typeof __VLS_components.LinTimelineItem, typeof __VLS_components.linTimelineItem, ]} */ ;
+// @ts-ignore
+const __VLS_177 = __VLS_asFunctionalComponent(__VLS_176, new __VLS_176({
+    timestamp: "2024-01-01",
+}));
+const __VLS_178 = __VLS_177({
+    timestamp: "2024-01-01",
+}, ...__VLS_functionalComponentArgsRest(__VLS_177));
+__VLS_179.slots.default;
+var __VLS_179;
+const __VLS_180 = {}.LinTimelineItem;
+/** @type {[typeof __VLS_components.LinTimelineItem, typeof __VLS_components.linTimelineItem, typeof __VLS_components.LinTimelineItem, typeof __VLS_components.linTimelineItem, ]} */ ;
+// @ts-ignore
+const __VLS_181 = __VLS_asFunctionalComponent(__VLS_180, new __VLS_180({
+    timestamp: "2024-01-02",
+    type: "success",
+}));
+const __VLS_182 = __VLS_181({
+    timestamp: "2024-01-02",
+    type: "success",
+}, ...__VLS_functionalComponentArgsRest(__VLS_181));
+__VLS_183.slots.default;
+var __VLS_183;
+const __VLS_184 = {}.LinTimelineItem;
+/** @type {[typeof __VLS_components.LinTimelineItem, typeof __VLS_components.linTimelineItem, typeof __VLS_components.LinTimelineItem, typeof __VLS_components.linTimelineItem, ]} */ ;
+// @ts-ignore
+const __VLS_185 = __VLS_asFunctionalComponent(__VLS_184, new __VLS_184({
+    timestamp: "2024-01-03",
+    icon: "check",
+}));
+const __VLS_186 = __VLS_185({
+    timestamp: "2024-01-03",
+    icon: "check",
+}, ...__VLS_functionalComponentArgsRest(__VLS_185));
+__VLS_187.slots.default;
+var __VLS_187;
+var __VLS_175;
 /** @type {__VLS_StyleScopedClasses['demo-container']} */ ;
 /** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
 /** @type {__VLS_StyleScopedClasses['demo-buttons']} */ ;
@@ -591,6 +727,7 @@ const __VLS_142 = __VLS_141({
 /** @type {__VLS_StyleScopedClasses['demo-carousel']} */ ;
 /** @type {__VLS_StyleScopedClasses['demo-section']} */ ;
 /** @type {__VLS_StyleScopedClasses['demo-carousel']} */ ;
+/** @type {__VLS_StyleScopedClasses['loading-demo-simple']} */ ;
 var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {
@@ -605,6 +742,10 @@ const __VLS_self = (await import('vue')).defineComponent({
             LinTag: LinTag,
             LinDropdown: LinDropdown,
             LinWarning: LinWarning,
+            LinLoading: LinLoading,
+            LinProgress: LinProgress,
+            LinTimeline: LinTimeline,
+            LinTimelineItem: LinTimelineItem,
             inputValue: inputValue,
             imageItems: imageItems,
             customItems: customItems,

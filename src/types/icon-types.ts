@@ -1,4 +1,4 @@
-// 自动生成的图标名称列表
+
 export const iconNames = [
   'add-location',
   'aim',
@@ -89,6 +89,7 @@ export const iconNames = [
   'document-delete',
   'document-remove',
   'document',
+  'dots',
   'download',
   'drizzling',
   'edit-pen',
@@ -238,6 +239,7 @@ export const iconNames = [
   'sort-down',
   'sort-up',
   'sort',
+  'spinner',
   'stamp',
   'star-filled',
   'star',
